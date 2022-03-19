@@ -1,0 +1,95 @@
+/* Definicao da Letra */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap');
+
+/* Configuracao da Pagina e Container */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+
+    max-width: 1180px;
+
+    border: 1px solid transparent;
+}
+
+/* Header */
+
+header {
+    background-color: #1D1D1F;
+}
+
+.area-do-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    padding-left: 35px;
+}
+
+.icons ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links
+.icons, li, a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.icons img {
+    width: 25px;
+}
+
+/* Área dos Títulos */
+
+.barra-titulo {
+    text-align: center;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+/* Área do Footer */
+
+footer {
+    background-color: #1D1D1F;
+    color: #FFFFFF;
+}
+
+.part {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bandeiras ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape {
+    background-color: #222831;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 11px;
+}
