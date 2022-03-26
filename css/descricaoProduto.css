@@ -1,81 +1,85 @@
-
-
-body {
+*{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
-.fone1{
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+headerinferior{
+    display: flex;
+    justify-content: center;
+    background-color: #222831;
+    color: white;
+}
+
+.fone{
+    margin-left: 180px;
+    margin-right: 180px;
+    padding: 5%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 200px;
-    margin-right: 200px;
-
 }
-.fonedescricao{
-    background-color: #EEEEEE;
-    border-radius: 8%;
-    justify-content: center;
-    margin-top: 15px;
-    height: 350px;
-    width: 350px;
 
+body div p{
+    word-break: break-all;
+}
+
+.fotosEProdutos{
+    cursor: pointer;
+    margin-left: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 330px;
 }
 
 .cores{
-    display: flex;
-    justify-content: right;
+    cursor: pointer;
+    margin-top: -10%;
     justify-content: space-between;
-    justify-content: space-around;
-    margin-left: 820px;
-    margin-right: 150px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    padding: 20px;  
 }
 
-.fotosProduto{
+.imgfone{
+    cursor: pointer;
     display: flex;
-    justify-content: space-between;
-    margin-right: 800px;
-    margin-bottom: 80px;
-    margin-left: 70px;
+    justify-content: left;
+    padding: 15%;
+    background-color: #EEEEEE
 }
 
-
-.valorProduto{
-    align-items: flex-start
-}
-.valorTotal{
-    font-size: 24px;
-    background-color: #EEEEEE;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 450px;
-    margin-left: 100px;
-    margin-bottom: 80px;
-    border-radius: 10%;
+.valor{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: larger;
+    color: #222831;
+    margin-left: 200px;
+    background-color: #222831;
+    margin-right: 1030px;
+    border-radius: 15px;
+    color: white;
 }
 
+.adicionarCarrinho{
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    color: #222831;
+    background-color: #D65A31;
+    border-radius: 15px;
+    color: white;
+    justify-content: center;
+    font-weight: 800;
+    padding: 3%;
+    margin-bottom: 50px;
+}
 
-.finalizarPedido{
+.texto{
     display: flex;
     justify-content: center;
-    background-color: orangered;
-    border-radius: 20%;
-    font-size: 36px;
-    margin-left: 600px;
-    margin-right: 550px;
-    margin-bottom: 80px;
-
 }
-
-
-
-
 
 
 
