@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap');
+
+/*! CONFIG CADASTRO */
+
+main {
+    background: rgba(225, 255, 1, 0);
+    min-height:100vh;
+    min-width: 100vw;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+main h2{
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-left: ;
+
+
+}
+ main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding-left: %;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+
+main form label{
+    display: flex;
+    flex-direction: column;
+}
+main form input {
+    color: rgba(2, 2, 2, 0.687);
+    border-radius: 5px;
+    width: 400px;
+    height: 35px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.649);
+
+}
+
+main form select{
+    color: rgba(2, 2, 2, 0.687);
+    border-radius: 5px;
+    width: 400px;
+    height: 35px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.649)
+}
+
+
+ form input[type="submit"] {
+
+    cursor: pointer;
+    width: 50%;
+    margin-top: 2rem;
+    border: 0;
+    border-radius: 5px;
+    background: rgb(35, 35, 35);
+    color: aliceblue;
+    font-size: 1.1rem ;
+    transition: all .5s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    etter-spacing: 0.5px;
+    border-radius: 35px;
+    background: rgb(0, 0, 0);
+}
