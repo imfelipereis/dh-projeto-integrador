@@ -83,6 +83,7 @@ body div p{
     margin-top: 100px;
     font-size: larger;
     font-weight: bold;
+    cursor: pointer;
 
 }
 
