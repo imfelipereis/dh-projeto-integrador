@@ -1,0 +1,217 @@
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 460px){
+
+    /* Área de Reset */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        margin: auto;
+        max-width: 300px;
+    }
+
+    /* Área do Header */
+
+    header {
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header .nav-links {
+        display: none;
+    }
+
+    header .icons img {
+        width: 15px;
+    }
+
+    /* Área do Banner */
+
+    .banner h2 {
+        font-size: 8px;
+    }
+
+    .banner h3 {
+        font-size: 6px;
+    }
+
+    .banner p {
+        font-size: 5px;
+        text-align: justify;
+        width: 30%;
+    }
+
+    .banner .saiba-mais {
+        display: none;
+    }
+
+    /* Área de Títulos */
+
+    .barra-titulo {
+        height: 8vh;
+        height: 3vh;
+    }
+
+    .barra-titulo h1 {
+        font-size: 13px;
+        text-align: center;
+        margin: auto;
+    }
+
+    /* Área de Explicação do Programa */
+
+    .programa {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .grid-um,
+    .grid-dois {
+        display: inline-block;
+    }
+
+    .caixa-um {
+        width: 100%;
+        height: auto;
+        padding-bottom: 12px;
+    }
+
+    .caixa-um h2 {
+        font-size: 12px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .caixa-um p {
+        font-size: 10px;
+    }
+
+    .caixa-dois img {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    /* Área dos Produtos */
+
+    .produtos .produto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produto {
+        border: 1px solid red;
+    }
+
+    .back-prod {
+        width: 100%;
+        border: 1px solid red;
+        padding: 0;
+    }
+
+    .back-prod img {
+        width: 70%;
+    }
+
+    .back-prod h2 {
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .back-prod p {
+        font-size: 8px;
+    }
+
+    .back-prod h3 {
+        font-size: 9px;
+    }
+
+    .back-prod button {
+        font-size: 7px;
+        width: 50%;
+        height: 15px;
+    }
+
+    /* Área de Comentários dos Clientes */
+
+    .cliente {
+        display: inline-block;
+        align-items: center;
+    }
+
+    .cliente img {
+        display: none;
+    }
+
+    .div-cliente {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Área de Textos do Sobre Nós, Termos e Condições, Política de Privacidade e Entrega dos Produtos */
+
+    .texto h2 {
+        font-size: 10px;
+    }
+
+    .texto h3 {
+        font-size: 9px;
+    }
+
+    .texto {
+        padding: 15px;
+        text-align: justify;
+        font-size: 8px;
+    }
+
+    /* Área da Newsletter */
+
+    .newsletter {
+        display: block;
+        width: 100%;
+    }
+
+    .newsletter h2 {
+        text-align: center;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .newsletter .cadastrar-newsletter {
+        align-items: center;
+    }
+
+    /* Área do Footer */
+
+    footer {
+        width: 100%;
+    }
+    
+    footer .part {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    footer .bloco {
+        padding: 15px;
+    }
+
+    /* Área das Informações Comerciais */
+
+    .rodape {
+        width: 100%;
+        font-size: 4px;
+    }
+}

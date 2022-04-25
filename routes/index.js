@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var CarrinhoControler = require('../controllers/CarrinhoController');
+// var CarrinhoControler = require('../controllers/CarrinhoController');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -13,8 +13,8 @@ router.get('/', function(req, res) {
 
 // Área do Carrinho
 
-router.get('/:item', CarrinhoControler.addItem);
-router.get('/:item', CarrinhoControler.removerItem);
+// router.get('/:item', CarrinhoControler.addItem);
+// router.get('/:item', CarrinhoControler.removerItem);
 
 // Área do Footer
 

@@ -16,13 +16,12 @@ body {
     margin: auto;
 
     max-width: 1180px;
-
-    border: 0.1px solid transparent;
 }
 
 /* Header */
 
 header {
+    width: 100%;
     background-color: #1D1D1F;
     box-sizing: border-box;
 }
