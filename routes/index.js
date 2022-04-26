@@ -34,4 +34,20 @@ router.get('/entrega-produtos', (req, res) => {
   res.render("entrega-produtos");
 })
 
+router.get('/descricaoProduto',(req,res) => {
+  res.render('descricaoProduto')
+})
+
+router.get('/login',(req,res) =>{
+  res.render('login')
+})
+
+router.get('/carrinho',(req,res) =>{
+  res.render('carrinho')
+})
+
+router.get('/cadastro',(req,res) =>{
+  res.render('cadastro')
+})
+
 module.exports = router;

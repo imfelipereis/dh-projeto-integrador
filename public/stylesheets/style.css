@@ -97,11 +97,6 @@ section.banner .carousel .controls button img {
     width: 15px;
 }
 
-section.banner .carousel .controls .saiba-mais {
-    background-color: #D65A31;
-    width: 100px;
-    border-radius: 9px;
-}
 
 /* Área dos Títulos */
 
@@ -146,7 +141,8 @@ section.banner .carousel .controls .saiba-mais {
 
 /* Área dos Produtos */
 
-.produto button {
+.saiba-mais,
+.produto a{
     background-color: #D65A31;
     color: #FFFFFF;
     border: none;
@@ -252,13 +248,6 @@ section.banner .carousel .controls .saiba-mais {
     border: none;
 }
 
-.newsletter button {
-    background-color: #D65A31;
-    color: #FFFFFF;
-    width: 80px;
-    height: 37px;
-    border: none;
-}
 
 /* Área do Footer */
 
