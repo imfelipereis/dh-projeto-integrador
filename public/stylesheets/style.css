@@ -26,6 +26,10 @@ header {
     box-sizing: border-box;
 }
 
+header .logotipo img {
+    width: 40px;
+}
+
 .area-do-header {
     display: flex;
     justify-content: space-between;

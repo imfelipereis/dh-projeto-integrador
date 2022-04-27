@@ -28,6 +28,10 @@
         align-items: center;
     }
 
+    header .logotipo img {
+        width: 30px;
+    }
+
     header .nav-links {
         display: none;
     }
