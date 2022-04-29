@@ -25,9 +25,8 @@ router.get("/termos-e-condicoes", PoliticasController.termosECondicoes);
 router.get("/politica-de-privacidade", PoliticasController.politicaDePrivacidade);
 router.get("/entrega-produtos", PoliticasController.entregaProdutos);
 
-router.get('/descricaoProduto',(req,res) => {
-  res.render('descricaoProduto')
-})
+//Arrumar esta rota
+//router.get("/descricaoProduto", ProductsController.descricaoProduto);
 
 router.get('/login',(req,res) =>{
   res.render('login')
@@ -40,5 +39,10 @@ router.get('/carrinho',(req,res) =>{
 router.get('/cadastro',(req,res) =>{
   res.render('cadastro')
 })
+
+router.get('/pagina-usuario', (req,res) => {
+  res.render('pagina-usuario')
+})
+
 
 module.exports = router;
