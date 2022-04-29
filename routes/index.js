@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 // var CarrinhoControler = require('../controllers/CarrinhoController');
+var PoliticasController = require('../controllers/PoliticasController');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Programa AirPods Para Sempre' });
 });
 
 // Área dos Produtos
@@ -18,21 +19,11 @@ router.get('/', function(req, res) {
 
 // Área do Footer
 
-router.get('/sobre-nos', (req, res) => {
-  res.render("sobre-nos");
-})
-
-router.get('/termos-e-condicoes', (req, res) => {
-  res.render("termos-e-condicoes");
-})
-
-router.get('/politica-de-privacidade', (req, res) => {
-  res.render("politica-de-privacidade");
-})
-
-router.get('/entrega-produtos', (req, res) => {
-  res.render("entrega-produtos");
-})
+router.get("/", PoliticasController.index);
+router.get("/sobre-nos", PoliticasController.sobreNos);
+router.get("/termos-e-condicoes", PoliticasController.termosECondicoes);
+router.get("/politica-de-privacidade", PoliticasController.politicaDePrivacidade);
+router.get("/entrega-produtos", PoliticasController.entregaProdutos);
 
 router.get('/descricaoProduto',(req,res) => {
   res.render('descricaoProduto')
