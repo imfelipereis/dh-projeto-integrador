@@ -28,21 +28,10 @@ router.get("/entrega-produtos", PoliticasController.entregaProdutos);
 //Arrumar esta rota
 //router.get("/descricaoProduto", ProductsController.descricaoProduto);
 
-router.get('/login',(req,res) =>{
-  res.render('login')
-})
-
-router.get('/carrinho',(req,res) =>{
-  res.render('carrinho')
-})
-
-router.get('/cadastro',(req,res) =>{
-  res.render('cadastro')
-})
-
-router.get('/pagina-usuario', (req,res) => {
-  res.render('pagina-usuario')
-})
-
+router.get("/pagina-usuario", PoliticasController.painelUsuario);
+router.get("/login", PoliticasController.login);
+router.get("/carrinho", PoliticasController.carrinho);
+router.get("/cadastro", PoliticasController.cadastro);
+router.get("/procurar", PoliticasController.procurar);
 
 module.exports = router;
