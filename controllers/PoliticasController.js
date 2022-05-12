@@ -70,6 +70,13 @@ const PoliticasController = {
 
     },
 
+    produto: (req, res) =>{
+        let info = {
+            titulo: "Descricao do produto",
+        };
+        return res.render('descricaoProduto', info)
+    },
+
 }
 
 module.exports = PoliticasController;

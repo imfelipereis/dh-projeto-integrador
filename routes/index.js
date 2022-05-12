@@ -28,10 +28,16 @@ router.get("/entrega-produtos", PoliticasController.entregaProdutos);
 //Arrumar esta rota
 //router.get("/descricaoProduto", ProductsController.descricaoProduto);
 
+
 router.get("/pagina-usuario", PoliticasController.painelUsuario);
 router.get("/login", PoliticasController.login);
 router.get("/carrinho", PoliticasController.carrinho);
 router.get("/cadastro", PoliticasController.cadastro);
 router.get("/procurar", PoliticasController.procurar);
+
+
+//Adicinar rota descricaoProduto.
+
+router.get('/descricaoProduto', PoliticasController.produto)
 
 module.exports = router;
