@@ -34,6 +34,7 @@ router.get("/login", PoliticasController.login);
 router.get("/carrinho", PoliticasController.carrinho);
 router.get("/cadastro", PoliticasController.cadastro);
 router.get("/procurar", PoliticasController.procurar);
+router.get("/finalizacaoPedido", PoliticasController.finalizacao)
 
 
 //Adicinar rota descricaoProduto.

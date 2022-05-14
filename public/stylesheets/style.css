@@ -385,3 +385,61 @@ margin-left: 10px;
     background-color: #D65A31;
     width: 80px;
 }
+
+
+/* Criação CSS da página Descrição do Produto */
+
+
+.lado-esquerdo{
+    max-width: 40%;
+    margin-left: 10%;
+    justify-content: left;
+    margin-bottom: 0%;
+}
+
+.lado-direito{
+    max-width: 40%;
+    margin-left: 10%;
+    justify-content: left;
+}
+
+body container section h2{
+    display: flex;
+    justify-content: center;
+}
+
+.foto-principal{
+    margin-left: 15%;
+}
+
+.area-pagina{
+    margin: 5%;
+    display: flex;
+    
+}
+
+.fotos-secundarias-fone{
+    display: flex;
+    justify-content: center;
+}
+
+
+.finalizar{
+    height: 5vh;
+    width: 20vh;
+    margin-bottom: 5vh;
+    margin-left: 80%;
+    background-color: #D65A31;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms, box-shadow 200ms;
+}
+
+.finalizar:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
+
+.valor{
+    margin-top: 5vh;
+}

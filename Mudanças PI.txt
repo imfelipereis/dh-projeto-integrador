@@ -1,0 +1,22 @@
+GIT Hub:
+- GIT Ignore
+
+
+CSS:
+- Unir os CSS: Todos, com exceção do arquivo mobile-last.css
+- Responsividade
+- Página Home: Slider, Rodapé
+- Login: Tudo
+- Cadastro: Tudo
+
+
+Páginas:
+- Procurar
+- Painel do Usuário (Feito)
+- Página Administração
+- Finalizar pedido (Em andamento)
+
+
+Express:
+- Pagina de Produto  (Feito)
+- Middleware

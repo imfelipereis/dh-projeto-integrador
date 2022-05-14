@@ -76,6 +76,12 @@ const PoliticasController = {
         };
         return res.render('descricaoProduto', info)
     },
+    finalizacao: (req, res) => {
+        let info = {
+            titulo: "Finalização do Pedido",
+        };
+        return res.render('finalizacaoPedido', info)
+    }
 
 }
 
