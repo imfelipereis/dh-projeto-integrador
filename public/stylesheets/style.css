@@ -469,3 +469,26 @@ body container section h2{
     transform: translateY(4px) translateX(4px);
     box-shadow: #094C66 0px 0px 0px;
 }
+
+.barra-pesquisa{
+   margin: 5%;
+   height: 3vh;
+   width: 25vw;
+   left: 10%;
+   border-radius: 30px;
+
+}
+
+.bot-pesquisa{
+    position: absolute;
+    top: 12%;
+    left: 51%;
+    transform: translate(-50%, 50%);
+    background: #D65A31;
+    height: 30px;
+    padding: 10px;
+    border-radius: 40px;
+    justify-content: space-between;
+    display: flex;
+
+}
