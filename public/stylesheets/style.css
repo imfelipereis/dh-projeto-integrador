@@ -473,16 +473,17 @@ body container section h2{
 .barra-pesquisa{
    margin: 5%;
    height: 3vh;
-   width: 25vw;
-   left: 10%;
+   width: 24vw;
+   left: 1%;
    border-radius: 30px;
+   margin-left: 12%;
 
 }
 
-.bot-pesquisa{
+.barra-texto{
     position: absolute;
     top: 12%;
-    left: 51%;
+    left: 56%;
     transform: translate(-50%, 50%);
     background: #D65A31;
     height: 30px;
@@ -490,5 +491,7 @@ body container section h2{
     border-radius: 40px;
     justify-content: space-between;
     display: flex;
-
+    font-family: 'Montserrat', sans-serif;
+    
 }
+
