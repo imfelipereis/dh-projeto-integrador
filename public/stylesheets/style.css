@@ -495,3 +495,120 @@ body container section h2{
     
 }
 
+.login{
+
+}
+
+.input-login-email{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.input-login-senha{
+    margin-left: 40%;
+    margin-top: 5%;
+
+}
+
+#formulario{
+    margin-top: 8%;
+    display: flex;
+
+}
+
+.campos-login{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+}
+
+.finalizar-cadastro{
+    height: 5vh;
+    width: 20vh;
+    background-color: #D65A31;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms, box-shadow 200ms;
+    margin-top: 15%;
+}
+
+.finalizar-cadastro:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
+
+.campo-email{
+    margin-top: 5%;
+}
+.campo-senha{
+    margin-top: 5%;
+}
+
+.fazer-cadastro{
+    height: 5vh;
+    width: 20vh;
+    background-color: white;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms, box-shadow 200ms;
+    margin-top: 15%;
+    margin-left: 500%;
+}
+
+.fazer-cadastro:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
+
+.formulario-cadastro{
+
+}
+
+
+.cadastro-usuario{ 
+    display: flex;
+    justify-content: center;
+    flex-direction: column ;
+}
+
+.campos-cadastro{
+    margin-left: 45%;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#data-nascimento{
+    width: 800px;
+}
+
+#campo-email,
+#campo-senha,
+#data-nascimento,
+#cidade,
+#estado,
+#endereco,
+#telefone{
+    width: 30%;
+    height: 45%;
+    margin-bottom: 2%;
+}
+
+
+.terminar-cadastro{
+    height: 5vh;
+    width: 20vh;
+    background-color:#D65A31;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms, box-shadow 200ms;
+    margin-top: 2%;
+    margin-left: 45%;
+    margin-bottom: 5%;
+}
+
+.terminar-cadastro:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
