@@ -6,6 +6,7 @@ const userController = require('../controllers/userController');
 const path = require("path");
 const {check} = require("express-validator");
 const {body} = require("express-validator");
+const multer = require("multer")
 
 
 /* GET home page. */
