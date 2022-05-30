@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var PoliticasController = require('../controllers/PoliticasController');
+const userController = require('../controllers/userController');
+const path = require("path");
+const {check} = require("express-validator");
+const {body} = require("express-validator");
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
 
 module.exports = router;
+

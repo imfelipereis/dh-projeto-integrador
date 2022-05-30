@@ -2,13 +2,37 @@ var express = require('express');
 var router = express.Router();
 // var CarrinhoControler = require('../controllers/CarrinhoController');
 var PoliticasController = require('../controllers/PoliticasController');
+const userController = require('../controllers/userController');
+const path = require("path");
+const {check} = require("express-validator");
+const {body} = require("express-validator");
+
 
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'Programa AirPods Para Sempre' });
 });
 
-// Área dos Produtos
+
+//AREA DO LOGIN E CADASTRO
+const validations = [
+  
+  check('name').notEmpty().withMessage("Coloque o nome por gentileza"),
+  check('email').notEmpty().withMessage("Coloque o email por gentileza"), 
+  check('psw').notEmpty().withMessage("Coloque a senha por gentileza"),
+
+];
+
+//ROUTER PARA LOGIN E  CADASTRO
+
+//Formulario de registro
+router.get('/cadastro', PoliticasController.register);
+
+//Processar o registro
+router.post('/cadastro', validations, PoliticasController.processRegister);
+
+
+
 
 
 
@@ -32,13 +56,16 @@ router.get("/entrega-produtos", PoliticasController.entregaProdutos);
 router.get("/pagina-usuario", PoliticasController.painelUsuario);
 router.get("/login", PoliticasController.login);
 router.get("/carrinho", PoliticasController.carrinho);
-router.get("/cadastro", PoliticasController.cadastro);
+
 router.get("/procurar", PoliticasController.procurar);
 router.get("/finalizacaoPedido", PoliticasController.finalizacao)
+
 
 
 //Adicinar rota descricaoProduto.
 
 router.get('/descricaoProduto', PoliticasController.produto)
+
+
 
 module.exports = router;

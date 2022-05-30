@@ -1,3 +1,16 @@
+var express = require('express');
+var router = express.Router();
+// var CarrinhoControler = require('../controllers/CarrinhoController');
+const User = require('../Models/User');
+const fs = require ("fs");
+const res = require('express/lib/response');
+const {validationResult} = require('express-validator');
+
+
+
+
+
+
 const PoliticasController = {
     index: (req, res) => {
         let info = {
@@ -81,6 +94,24 @@ const PoliticasController = {
             titulo: "Finalização do Pedido",
         };
         return res.render('finalizacaoPedido', info)
+    },
+    register: (req,res) => {
+        return res.render("cadastro")
+    },
+    processRegister: (req,res) => {
+        const resultValidations = validationResult(req);
+
+        if (resultValidations.errors.length > 0) {
+            return res.render("cadastro", {
+                errors: resultValidations.mapped(),
+                oldData: req.body 
+            });
+        }
+
+        User.create(req.body)
+
+        return res.send("Ok, o usuario foi salvo")
+
     }
 
 }

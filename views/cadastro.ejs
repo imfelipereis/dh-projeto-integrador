@@ -1,26 +1,25 @@
+<div>
+    <div class="div-child">
+        <form method="POST" action="/cadastro" enctype="multipart/form-data" style="border:1px solid #ccc">
+            <div class="container">
+                <h2>Registro de usuario</h2>
+                <hr>
 
-<%- include('./partials/head') %>
+                <label for="name"><b>Nome Completo </b></label>
+                <input type="text" name="name">
+               
+                <label for="email"><b> Email </b></label>
+                <input type="email" name="email">
+                
+                <label for="psw"><b> password </b></label>
+                <input type="password" name="psw" >
+                
 
-<link rel="stylesheet" href="/stylesheets/style.css">
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn" style="font-size: 18px"> <b>Registrar </b> </button>
+                </div>
+            </div>
+        </form>
 
-<section class="cadastro-ususario">
-    <h3>Faça seu cadastro</h3>
-    <div class="campos-cadastro">
-        <label> Email: </label><input id="campo-email" type="email">
-        <label> Senha: </label><input id="campo-senha" type="password">
-        <label> Confirme sua senha: </label><input id="campo-senha" type="password">
-        <label> Data de nascimento </label><input id="data-nascimento" type="date">
-        <label> Cidade: </label><input id="cidade" type="text">
-        <label> Estado: </label><input id="estado" type="text">
-        <label> Endereço: </label><input id="endereco" type="text">
-        <label> Telefone: </label><input id="telefone" type="tel">
-        <label> Receber emails e telefonemas sobre novidades? </label><input id="checkbox" type="checkbox">
-        <label> Concordo com termos e condições </label><input id="checkbox" type="checkbox">
     </div>
-</section>
-
-<button class="terminar-cadastro">
-    <a href="pagina-usuario"> Fazer seu cadastro </a>
-</button>
-
-<%- include('./partials/footer') %>
+</div>
