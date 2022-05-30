@@ -27,10 +27,10 @@ const validations = [
 //ROUTER PARA LOGIN E  CADASTRO
 
 //Formulario de registro
-router.get('/cadastro', PoliticasController.register);
+router.get('/cadastro', userController.register);
 
 //Processar o registro
-router.post('/cadastro', validations, PoliticasController.processRegister);
+router.post('/acaoCadastro', userController.processRegister);
 
 
 
