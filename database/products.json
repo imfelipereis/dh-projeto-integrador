@@ -1,0 +1,57 @@
+[
+    {
+     "id": 1,
+     "name": "FoneAirpods1",
+     "cor": "prata",
+     "foto": "produto-1"
+    },
+
+    {
+     "id": 2,
+     "name": "FoneAirpods1",
+     "cor": "azul",
+     "foto": "produto-1"
+    },
+
+    {
+    "id": 3,
+     "name": "FoneAirpods2",
+     "cor": "prata",
+     "foto": "produto-1"
+    },
+
+    {
+    "id": 4,
+     "name": "FoneAirpods2",
+     "cor": "azul",
+     "foto": "produto-1"
+    },
+
+    {
+    "id": 5,
+    "name": "FoneAirpods3",
+    "cor": "prata",
+    "foto": "produto-1"
+    },
+
+    {
+    "id": 6,
+    "name": "FoneAirpods3",
+    "cor": "azul",
+    "foto": "produto-1"
+    },
+
+    {
+    "id": 7,
+    "name": "FoneAirpods4",
+    "cor": "prata",
+    "foto": "produto-1"
+    },
+
+    {
+    "id": 8,
+    "name": "FoneAirpods4",
+    "cor": "azul",
+    "foto": "produto-1"
+    }
+]

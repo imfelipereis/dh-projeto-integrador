@@ -1,0 +1,61 @@
+<%- include('./partials/head') %>
+
+
+
+<div class="caixa-login">
+  <h3>Faça seu login </h3>
+      
+
+
+    <form method="POST" action="/usuarioLogin" enctype="multipart/form-data">
+      
+      <div class="acesso-email">
+        <label> Email: </label>
+        <input type="text" name="email" class="campo-email" value="<%= locals.oldData ? oldData.name : null %>">
+        <% if(locals.errors && errors.email){ %>  
+          <div class="danger"><%= errors.email.msg %>
+          </div>
+        <% } %>
+      </div>
+
+      <div class="acesso-senha">
+        <label> Senha: </label>
+        <input type="password" name="psw" class="campo-senha">
+        <% if(locals.errors && errors.psw){ %>  
+          <div class="danger"><%= errors.psw.msg %></div>
+        <% } %>
+        </div>
+        
+        <div>
+        <label> Lembrar-me</label><input class="lembrar-me" type="checkbox" class="lembrar-me">
+        </div>
+      
+
+      
+    <div>
+      <button class="finalizar-cadastro"> Fazer Login </button>
+      
+
+    </div>
+
+  
+
+
+
+    </form>
+    <div class="parte-baixo">
+      <h5>Caso não tenha cadastro, faça no botão abaixo!
+      </h5>
+    </div>
+
+    <div>
+      <a href="/cadastrar" id="finalizar-cadastro"> Fazer cadastro
+      </a>
+    </div>
+    
+  </div>
+
+
+
+
+<%- include('./partials/footer') %>

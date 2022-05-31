@@ -54,7 +54,6 @@ router.get("/entrega-produtos", PoliticasController.entregaProdutos);
 //router.get("/descricaoProduto", ProductsController.descricaoProduto);
 
 
-router.get("/pagina-usuario", PoliticasController.painelUsuario);
 router.get("/login", PoliticasController.login);
 router.get("/carrinho", PoliticasController.carrinho);
 
@@ -64,8 +63,6 @@ router.get("/finalizacaoPedido", PoliticasController.finalizacao)
 
 
 //Adicinar rota descricaoProduto.
-
-router.get('/descricaoProduto', PoliticasController.produto)
 
 
 

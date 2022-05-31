@@ -1,21 +1,37 @@
 [
-    {
-        "id": 1,
-        "fullname": "Igor Muller",
-        "email": "muller.igor@icloud.com",
-        "password": "123456",
-        "country": "Brasil"
-    },
-    {
-        "id": 2,
-        "fullname": "admin",
-        "email": "admin@pi.com.br",
-        "password": "123",
-        "country": "Brasil"
-    },
-    {
-        "id": 3,
-        "fullname": "Silvio Dh",
-        "email": "silvio@dh.com"
-    }
+ {
+  "id": 1,
+  "name": "Igor Muller",
+  "email": "muller.igor@icloud.com",
+  "psw": "$2b$10$tCglqaDzkGaBVs0gnzfymOtkQG7JInO1gqhgUEukw9yIcQT8cJXR2",
+  "avatar": "1653954609569.jpg"
+ },
+ {
+  "id": 2,
+  "name": "igor",
+  "email": "aosjdoiasuhd@hotmail.com",
+  "psw": "$2b$10$/4m7eulCLuyHXoY3I8de1.tv5CLcLpd14FrX3gWohuq1N1zkAJrmC",
+  "avatar": "1653960680927.jpg"
+ },
+ {
+  "id": 3,
+  "name": "eduardo",
+  "email": "eduardo@dh.com",
+  "psw": "$2b$10$Mi7SHOnC65zLJZHEsQg3fOfdvVP4FWi18MaMlK69BZkCRhwIDzbWO",
+  "avatar": "1653960966403.jpg"
+ },
+ {
+  "id": 4,
+  "name": "teste",
+  "email": "teste@dh.com.br",
+  "psw": "$2b$10$hGRU.rkruBhFs0GND/PIbeFAP8p/MdqEg1bLLwl1OicD7Sq0yKeTu",
+  "avatar": "1653961151728.jpg"
+ },
+ {
+  "id": 5,
+  "name": "teste pi",
+  "email": "testepi@hotmail.com",
+  "psw": "$2b$10$ZX/wMfSH/gtoOYKjG4G61eEkUI.WX9VYuwzU7upGtrjwiszmWazh6",
+  "avatar": "1653964261458.jpg"
+ }
 ]

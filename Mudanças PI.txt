@@ -6,17 +6,17 @@ CSS:
 - Unir os CSS: Todos, com exceção do arquivo mobile-last.css
 - Responsividade
 - Página Home: Slider, Rodapé
-- Login: Tudo
-- Cadastro: Tudo
+- Login: Tudo (Feito)
+- Cadastro: Tudo (Feito)
 
 
 Páginas:
-- Procurar
+- Procurar (Feito)
 - Painel do Usuário (Feito)
-- Página Administração
+- Página Administração 
 - Finalizar pedido (Em andamento)
 
 
 Express:
 - Pagina de Produto  (Feito)
-- Middleware
+- Middleware (Feito)
