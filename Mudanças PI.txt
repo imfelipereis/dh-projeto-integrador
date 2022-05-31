@@ -3,7 +3,7 @@ GIT Hub:
 
 
 CSS:
-- Unir os CSS: Todos, com exceção do arquivo mobile-last.css
+- Unir os CSS: Todos, com exceção do arquivo mobile-last.css (Feito)
 - Responsividade
 - Página Home: Slider, Rodapé
 - Login: Tudo (Feito)
@@ -14,7 +14,7 @@ Páginas:
 - Procurar (Feito)
 - Painel do Usuário (Feito)
 - Página Administração 
-- Finalizar pedido (Em andamento)
+- Finalizar pedido (Feito)
 
 
 Express:
