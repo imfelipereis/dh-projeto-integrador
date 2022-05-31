@@ -33,5 +33,12 @@
   "email": "testepi@hotmail.com",
   "psw": "$2b$10$ZX/wMfSH/gtoOYKjG4G61eEkUI.WX9VYuwzU7upGtrjwiszmWazh6",
   "avatar": "1653964261458.jpg"
+ },
+ {
+  "id": 6,
+  "name": "teste dh",
+  "email": "saldkasl@dh.com.br",
+  "psw": "$2b$10$CdI/hAx7H145UUd1E0Kr1.mIDwbDlgCOXhVq06KsixJWv7bcxMoxy",
+  "avatar": "1654033070483.jpg"
  }
 ]
