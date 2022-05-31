@@ -8,37 +8,9 @@
  },
  {
   "id": 2,
-  "name": "igor",
-  "email": "aosjdoiasuhd@hotmail.com",
-  "psw": "$2b$10$/4m7eulCLuyHXoY3I8de1.tv5CLcLpd14FrX3gWohuq1N1zkAJrmC",
-  "avatar": "1653960680927.jpg"
- },
- {
-  "id": 3,
-  "name": "eduardo",
-  "email": "eduardo@dh.com",
-  "psw": "$2b$10$Mi7SHOnC65zLJZHEsQg3fOfdvVP4FWi18MaMlK69BZkCRhwIDzbWO",
-  "avatar": "1653960966403.jpg"
- },
- {
-  "id": 4,
-  "name": "teste",
-  "email": "teste@dh.com.br",
-  "psw": "$2b$10$hGRU.rkruBhFs0GND/PIbeFAP8p/MdqEg1bLLwl1OicD7Sq0yKeTu",
-  "avatar": "1653961151728.jpg"
- },
- {
-  "id": 5,
-  "name": "teste pi",
-  "email": "testepi@hotmail.com",
-  "psw": "$2b$10$ZX/wMfSH/gtoOYKjG4G61eEkUI.WX9VYuwzU7upGtrjwiszmWazh6",
-  "avatar": "1653964261458.jpg"
- },
- {
-  "id": 6,
-  "name": "teste dh",
-  "email": "saldkasl@dh.com.br",
-  "psw": "$2b$10$CdI/hAx7H145UUd1E0Kr1.mIDwbDlgCOXhVq06KsixJWv7bcxMoxy",
-  "avatar": "1654033070483.jpg"
+  "name": "testedh",
+  "email": "testedh@gmail.com",
+  "psw": "$2b$10$vlowi6448l8dO8werXXYo.y0E2jn1yPv13W4OBKfeebk32imjJt7K",
+  "avatar": "1654035935891.jpg"
  }
 ]
