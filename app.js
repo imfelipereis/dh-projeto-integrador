@@ -6,9 +6,10 @@ var logger = require('morgan');
 var session = require('express-session')
 const bodyParser = require("body-parser")
 
-var productsRouter = require('./routes/products')
+var productsRouter = require('./routes/products');
 var indexRouter = require('./routes/index');
-var usuariosRouter = require('./routes/usuarios')
+var usuariosRouter = require('./routes/usuarios');
+var adminRouter = require('./routes/admin');
 
 
 
@@ -39,7 +40,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/', usuariosRouter);
-app.use('/', productsRouter)
+app.use('/', productsRouter);
+app.use('/', adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

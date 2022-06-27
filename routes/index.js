@@ -3,6 +3,7 @@ var router = express.Router();
 // var CarrinhoControler = require('../controllers/CarrinhoController');
 var PoliticasController = require('../controllers/PoliticasController');
 const userController = require('../controllers/userController');
+const AdministracaoController = require('../controllers/AdministracaoController');
 const path = require("path");
 const {check} = require("express-validator");
 const {body} = require("express-validator");
