@@ -3,6 +3,7 @@ const User = require('../models/User')
 const bcrypt = require('bcrypt');
 const { findUserByField } = require('../models/User');
 const fs = require ('fs')
+const db = require("../database/models")
 
 let findUserByEmail = function (email){
     let todosUsuarios = this.getUsers();
@@ -74,7 +75,19 @@ const controller = {
 
     usuarioLogin: (req, res) =>{
         res.render("pagina-usuario")
-    }
+    },
+
+    usuariosBd: (req, res) => {
+        db.Usuarios.findAll().then((resposta) => {
+            res.send(resposta);
+        })
+    },
+
+    insertUser: (req, res) => {
+        res.send("Dados recebidos")
+    },
+
+
     
 }
 

@@ -1,0 +1,17 @@
+<%- include('./partials/head') %>
+
+<form action="/usuarios/insertuser" method="POST">
+    <div class="form-control">
+        <label for="name"> Nome: </label>
+        <input type="text" name="name" placeholder="Digite o nome do usuário:">
+    </div>
+
+    <div class="form-control">
+        <label for="sobrenome"> Sobrenome: </label>
+        <input type="text" name="sobrenome" placeholder="Digite o sobrenome do usuário:">
+    </div>
+    <input type="submit" value="Cadastrar">
+</form>
+
+
+<%- include('./partials/footer') %>

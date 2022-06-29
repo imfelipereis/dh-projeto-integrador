@@ -28,6 +28,15 @@ router.get("/pagina-usuario", userController.painelUsuario);
 
 router.post('/usuarioLogin',userController.usuarioLogin);
 
+
+
+//Banco de dados
+
+router.get("/usuarios", userController.usuariosBd);
+router.post("/usuarios/insertuser", userController.insertUser);
+
+
+
 module.exports = router;
 
 
