@@ -118,8 +118,10 @@ section.banner .carousel .controls button img {
 
 .grid-um,
 .grid-dois {
-    display: flex;
+    display:flex;
     justify-content: space-between;
+    
+
 }
 
 .caixa-um {
@@ -172,11 +174,15 @@ section.banner .carousel .controls button img {
 .back-prod {
 
     align-items: center;
-
     width: 250px;
     height: 450px;
     padding: 25px;
-    
+    justify-content: center;
+}
+
+.valor-prod {
+    justify-content: center;
+    align-items: center; 
 }
 
 .produto {
