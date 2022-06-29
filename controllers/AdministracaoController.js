@@ -9,18 +9,61 @@ const AdministracaoController = {
         return res.render("dashboard", info);
     },
 
-    vendas: (req, res) => {
+    // vendas: (req, res) => {
+    //     let info = {
+    //         titulo: 'Vendas',
+    //     };
+    //     return res.render("vendas", info);
+    // },
+
+    cadastrarVenda: (req, res) => {
         let info = {
-            titulo: 'Vendas',
+            titulo: 'Cadastrar Nova Venda',
         };
-        return res.render("vendas", info);
+        return res.render("cadastrar-venda", info);
+    },
+
+    acaoCadastrarVenda: (req, res) => {
+        
+        const id = req.body.id;
+        const image = req.body.image;
+        const nome = req.body.nome;
+        const geracao = req.body.geracao;
+        const valor = req.body.valor;
+        const qtdEstoque = req.body.qtdEstoque;
+        const descricao = req.body.descricao;
+
+        const objVenda = {
+            id: id,
+            image: image,
+            nome: nome,
+            geracao: geracao,
+            valor: valor,
+            qtdEstoque: qtdEstoque,
+            descricao: descricao
+        }
+
+        vendas.push(objVenda);
+
+        res.redirect("/vendas");
+    },
+
+    editarVenda: (req, res) => {
+        let info = {
+            titulo: 'Editar Vende',
+        };
+        return res.render("editar-venda", info)
     },
 
     produtos: (req, res) => {
         let info = {
             titulo: 'Produtos',
         };
-        return res.render("produtos", info);
+
+        res.render("produtos", info, {
+            produtos: produtos
+        });
+
     },
 
     cadastrarProduto: (req, res) => {
@@ -32,12 +75,27 @@ const AdministracaoController = {
 
     acaoCadastrar: (req, res) => {
         
+        const id = req.body.id;
+        const image = req.body.image;
         const nome = req.body.nome;
         const geracao = req.body.geracao;
         const valor = req.body.valor;
         const qtdEstoque = req.body.qtdEstoque;
         const descricao = req.body.descricao;
 
+        const objProduto = {
+            id: id,
+            image: image,
+            nome: nome,
+            geracao: geracao,
+            valor: valor,
+            qtdEstoque: qtdEstoque,
+            descricao: descricao
+        }
+
+        produtos.push(objProduto);
+
+        res.redirect("/produtos");
     },
 
     editar: (req, res) => {
@@ -47,11 +105,50 @@ const AdministracaoController = {
         return res.render("editar", info);
     },
 
-    clientes: (req, res) => {
+    // clientes: (req, res) => {
+    //     let info = {
+    //         titulo: 'Clientes',
+    //     };
+    //     return res.render("clientes", info)
+    // }
+
+    cadastrarCliente: (req, res) => {
         let info = {
-            titulo: 'Clientes',
+            titulo: 'Cadastrar Novo Cliente',
         };
-        return res.render("clientes", info)
+        return res.render("cadastrar-cliente", info);
+    },
+
+    acaoCadastrarCliente: (req, res) => {
+        
+        const id = req.body.id;
+        const image = req.body.image;
+        const nome = req.body.nome;
+        const geracao = req.body.geracao;
+        const valor = req.body.valor;
+        const qtdEstoque = req.body.qtdEstoque;
+        const descricao = req.body.descricao;
+
+        const objCliente = {
+            id: id,
+            image: image,
+            nome: nome,
+            geracao: geracao,
+            valor: valor,
+            qtdEstoque: qtdEstoque,
+            descricao: descricao
+        }
+
+        clientes.push(objCliente);
+
+        res.redirect("/clientes");
+    },
+
+    editarCliente: (req, res) => {
+        let info = {
+            titulo: 'Editar Cliente',
+        };
+        return res.render("editar-cliente", info)
     }
 
 }

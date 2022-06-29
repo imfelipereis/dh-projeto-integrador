@@ -1,1 +1,50 @@
 <%- include('./admin/partials/header') %>
+
+<div class="container">
+
+    <h1> Clientes </h1>
+
+    <div>
+        <h3><a href="/clientes/cadastrar">Adicionar Novo Cliente</a></h3>
+    </div>
+
+    <div class="tabela-clientes">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Situação Usuário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <% for (let cliente in clientes) { %>
+
+                    <tr>
+                        <td><%= cliente.id %></td>
+                        <td><%= cliente.nome %></td>
+                        <td><%= cliente.telefone %></td>
+                        <td><%= cliente.email %></td>
+                        <td><%= cliente.statusUsuario %></td>
+                        <td>
+                            <a href="/admin/clientes/visualizar<%= cliente.id %>">Visualizar</a>
+                            <a href="/admin/clientes/editar<%= cliente.id %>">Editar</a>
+                        </td>
+                    </tr>
+
+                <% } %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
