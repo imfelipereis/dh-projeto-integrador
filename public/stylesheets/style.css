@@ -104,6 +104,13 @@ section.banner .carousel .controls button img {
     width: 30px;
 }
 
+.texto-geracao {
+    display: flex;
+    justify-content: left;
+    justify-items: flex-start;
+
+}
+
 
 /* Área dos Títulos */
 
@@ -504,7 +511,6 @@ body container section h2{
     border-radius: 8px;
     transition: transform 200ms, box-shadow 200ms; 
     
-
 }
 
 .saiba-mais-1:active {
@@ -544,6 +550,7 @@ body container section h2{
 .input-login-email{
     margin-left: 40%;
     margin-top: 5%;
+    
 }
 
 .input-login-senha{
@@ -569,7 +576,7 @@ body container section h2{
     width: 20vh;
     background-color: #D65A31;
     box-shadow: #094c66 4px 4px 0px;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: transform 200ms, box-shadow 200ms;
     margin-top: 15%;
 }
@@ -657,18 +664,23 @@ body container section h2{
 
 h3{
     margin-left: 35%;
+    height: 0%;
+    display: inline-flex;
+
 }
 
 .caixa-login,
 .caixa-cadastro{
-    width: 60vh;
-    height: 60vh;
+    width: 65vh;
+    height: 65vh;
     background-color:#C4C4C4;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
-    border-radius: 3vh;
-    box-shadow: black 4px 4px 4px;
+    margin-top: 5%;
+    border-radius: 5vh;
+    box-shadow: black 2px 2px 2px;
+    justify-content: center;
 }
 
 .body-login{
@@ -700,7 +712,14 @@ form{
 .acesso-senha,
 .botao-acesso,
 .acesso-avatar{
-    margin-top: 10%;
+    margin-top: 7%;
+    border-radius: 5px;
+    height: 55px;
+    width: 55%;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 400;
+
 }
 
 .danger{
