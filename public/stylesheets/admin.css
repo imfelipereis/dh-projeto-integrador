@@ -1,0 +1,18 @@
+
+
+h3 a {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+ 
+table td {
+    border: 1px solid grey;
+}
+ 
+table th {
+    border: 1px solid grey;
+    height: 25px;
+}
