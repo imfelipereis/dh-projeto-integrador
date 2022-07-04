@@ -257,6 +257,7 @@ section.banner .carousel .controls button img {
 
 .newsletter {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items:flex-end;
     background-color:#D65A31;
@@ -279,6 +280,19 @@ section.banner .carousel .controls button img {
     margin-top: 1px;
     border-radius: 5px;
     cursor: pointer;
+
+}
+
+.button-cadastrar {
+    margin-top: 1px;
+    border-radius: 10px;
+    justify-items: baseline;
+    height: 30px;
+    margin-left: 1px;
+    display: block;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: flex-end;
 
 }
 
@@ -715,7 +729,7 @@ form{
     margin-top: 7%;
     border-radius: 5px;
     height: 55px;
-    width: 55%;
+    width: 60%;
     flex-direction: column;
     font-size: 18px;
     font-weight: 400;
@@ -728,19 +742,23 @@ form{
 }
 
 .parte-baixo{
-    margin-top: 15%;
-    margin-left: 20%;
+    margin-top: 13%;
+    margin-left: 18%;
+    font-size: 18px;    
 }
 
 #finalizar-cadastro{
-    height: 5vh;
+    height: 10vh;
     width: 20vh;
     background-color: #D65A31;
-    box-shadow: #094c66 4px 4px 0px;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: transform 200ms, box-shadow 200ms;
-    margin-top: 15%;
+    margin-top: 50%;
     margin-left: 35%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1D1D1F;
+    
 }
 
 #finalizar-cadastro:active{
