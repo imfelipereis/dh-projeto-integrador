@@ -1,0 +1,56 @@
+<%- include("../admin/partials/header") %>
+
+<div class="container">
+
+    <div class="area-titulo">
+        <h1>PAINEL ADMINISTRATIVO</h1>
+    </div>
+
+    <div class="topo">
+        <h2>Produtos</h2>
+        <a href="/admin/produtos/cadastrar">Adicionar Novo</a>
+    </div>
+
+    <div class="area-tabela">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <% for(let produto of produtos) { %>
+
+                    <tr>
+                        <td><%= produto.id %></td>
+                        <td><img src="/upload/images/produtos/<%= produto.imagem %>" width="100"></td>
+                        <td><%= produto.nome %></td>
+                        <td><%= produto.preco %></td>
+                        <td><%= produto.descricao %></td>
+                        <td>
+                            <a href="/admin/produtos/visualizar/<%= produto.id %>">Visualizar</a>
+                            <a href="/admin/produtos/editar/<%= produto.id %>">Editar</a>
+                            <a href="/admin/produtos/excluir/<%= produto.id %>">Excluir</a>
+                        </td>
+                    </tr>
+
+                <% } %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

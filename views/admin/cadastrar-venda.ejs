@@ -1,4 +1,4 @@
-<%- include('./admin/partials/header') %>
+<%- include('../admin/partials/header') %>
 
 <div class="container">
 
@@ -15,33 +15,33 @@
             </div>
 
             <div>
-                <label for="">Nome do Cliente:</label>
-                <input type="text" name="nome">
+                <label for="nome">Nome do Cliente:</label>
+                <input type="text" name="nome" id="nome">
             </div>
 
             <div>
-                <label for="">Status</label>
-                <select name="" id="">
-                    <option value="">Anulado</option>
-                    <option value="">Cancelado</option>
-                    <option value="">Chargeback</option>
-                    <option value="">Devolvido</option>
-                    <option value="">Entregue</option>
-                    <option value="">Enviado</option>
-                    <option value="">Expirado</option>
-                    <option value="">Falha</option>
-                    <option value="">Pagamento Aceito</option>
-                    <option value="">Pendente</option>
-                    <option value="">Preparação em Curso</option>
-                    <option value="">Processada</option>
-                    <option value="">Reserva Cancelada</option>
-                    <option value="">Revertido</option>
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="anulado">Anulado</option>
+                    <option value="cancelado">Cancelado</option>
+                    <option value="chargeback">Chargeback</option>
+                    <option value="devolvido">Devolvido</option>
+                    <option value="entregue">Entregue</option>
+                    <option value="enviado">Enviado</option>
+                    <option value="expirado">Expirado</option>
+                    <option value="falha">Falha</option>
+                    <option value="pagamentoAceito">Pagamento Aceito</option>
+                    <option value="pendente">Pendente</option>
+                    <option value="prepracaoEmCurso">Preparação em Curso</option>
+                    <option value="processada">Processada</option>
+                    <option value="reservaCancelada">Reserva Cancelada</option>
+                    <option value="revertido">Revertido</option>
                 </select>
             </div>
 
             <div>
-                <label for="">Total</label>
-                <input type="text" name="nome">
+                <label for="total">Total</label>
+                <input type="text" name="nome" id="">
             </div>
 
             <div>

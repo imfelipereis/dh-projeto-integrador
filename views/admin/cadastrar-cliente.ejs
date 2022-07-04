@@ -1,4 +1,4 @@
-<%- include('./admin/partials/header') %>
+<%- include('../admin/partials/header') %>
 
 <div class="container">
 
@@ -8,7 +8,7 @@
 
     <div class="cadastrar-cliente">
 
-        <form action="">
+        <form action="/acaoCadastrarCliente" method="POST">
 
             <div class="dados-usuario">
 
@@ -33,7 +33,7 @@
 
                 <div>
                     <label for="">Data de Nascimento:</label>
-                    <input type="date" name="dataNascimento">
+                    <input type="date" name="data_nascimento">
                 </div>
 
                 <div>
@@ -48,14 +48,17 @@
 
                 <div>
                     <label for="">Situação Usuário:</label>
-                    <input type="text" name="situacaoUsuario">
+                    <select name="situacao_usuario" id="">
+                        <option value="ativo">Ativo</option>
+                        <option value="desativo">Desativo</option>
+                    </select>
                 </div>
 
                 <div>
                     <label for="">Tipo de Usuário:</label>
-                    <select name="tipoUsuario" id="">
-                        <option value="cliente">Cliente</option>
-                        <option value="admin">Administrador</option>
+                    <select name="usuario_adm" id="">
+                        <option value="Não">Cliente</option>
+                        <option value="Sim">Administrador</option>
                     </select>
                 </div>
 
@@ -70,42 +73,42 @@
                 <div>
 
                     <label for="">Logradouro:</label>
-                    <input type="text" name="">
+                    <input type="text" name="logradouro">
 
                 </div>
 
                 <div>
 
                     <label for="">Nº:</label>
-                    <input type="text" name="">
+                    <input type="text" name="numero">
 
                 </div>
 
                 <div>
 
                     <label for="">Bairro:</label>
-                    <input type="text" name="">
+                    <input type="text" name="bairro">
 
                 </div>
 
                 <div>
 
                     <label for="">Complemento:</label>
-                    <input type="text" name="">
+                    <input type="text" name="complemento">
 
                 </div>
 
                 <div>
 
                     <label for="">Cidade</label>
-                    <input type="text" name="">
+                    <input type="text" name="cidade">
 
                 </div>
 
                 <div>
 
                     <label for="">Estado:</label>
-                    <select name="" id="">
+                    <select name="estado" id="">
                         <option value="ac">Acre</option>
                         <option value="al">Alagoas</option>
                         <option value="ap">Amapá</option>
@@ -140,7 +143,7 @@
                 <div>
 
                     <label for="">CEP:</label>
-                    <input type="text" name="">
+                    <input type="text" name="cep">
 
                 </div>
 
@@ -156,7 +159,7 @@
                 <div>
 
                     <label for="">Ponto de Referência:</label>
-                    <input type="text" name="">
+                    <input type="text" name="ponto_referencia">
 
                 </div>                
 
