@@ -1,41 +1,42 @@
-<%- include('../admin/partials/header') %>
+<%- include("../admin/partials/header") %>
 
 <div class="container">
 
-    <h1> Clientes </h1>
-
-    <div>
-        <h3><a href="/clientes/cadastrar">Adicionar Novo Cliente</a></h3>
+    <div class="topo">
+        <h2>Clientes</h2>
+        <a href="/admin/clientes/cadastrar">Adicionar Novo</a>
     </div>
 
-    <div class="tabela-clientes">
+    <div class="area-tabela">
 
         <table>
 
             <thead>
+
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>Email</th>
                     <th>Telefone</th>
-                    <th>E-mail</th>
                     <th>Situação Usuário</th>
                     <th>Ações</th>
                 </tr>
+
             </thead>
 
             <tbody>
 
-                <% for (let cliente in clientes) { %>
+                <% for(let cliente of clientes) { %>
 
                     <tr>
                         <td><%= cliente.id %></td>
                         <td><%= cliente.nome %></td>
-                        <td><%= cliente.telefone %></td>
                         <td><%= cliente.email %></td>
+                        <td><%= cliente.telefone %></td>
                         <td><%= cliente.situacao_usuario %></td>
                         <td>
-                            <a href="/admin/clientes/visualizar<%= cliente.id %>"><img src="../public/images/icons/visualizar.png" alt=""></a>
-                            <a href="/admin/clientes/editar<%= cliente.id %>"><img src="../public/images/icons/editar.png" alt=""></a>
+                            <a href="/admin/clientes/editar/<%= cliente.id %>">Editar</a>
+                            <a href="/admin/clientes/excluir/<%= cliente.id %>">Excluir</a>
                         </td>
                     </tr>
 

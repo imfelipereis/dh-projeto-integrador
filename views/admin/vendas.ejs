@@ -1,50 +1,56 @@
-<%- include('../admin/partials/header') %>
+<%- include("../admin/partials/header") %>
 
 <div class="container">
 
-    <h1>Vendas</h1>
-
-    <div>
-        <h3><a href="/vendas/cadastrar">Adicionar Nova venda</a></h3>
+    <div class="topo">
+        <h2>Vendas</h2>
+        <a href="/admin/vendas/cadastrar">Adicionar Novo</a>
     </div>
 
-<div class="tabela-vendas">
+    <div class="area-tabela">
 
-    <table>
+        <table>
 
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Cliente</th>
-                <th>Status</th>
-                <th>Data de Compra</th>
-                <th>Ultima Modificação</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-
-        <tbody>
-
-            <% for (let venda in vendas) { %>
+            <thead>
 
                 <tr>
-                    <td><%= venda.id %></td>
-                    <td><%= venda.cliente %></td>
-                    <td><%= venda.status %></td>
-                    <td><%= venda.dataCompra %></td>
-                    <td><%= venda.dataModificacao %></td>
-                    <td>
-                        <a href="/admin/vendas/visualizar"><img src="../public/images/icons/visualizar.png" alt=""></a>
-                        <a href="/admin/vendas/editar"><img src="../public/images/icons/editar.png" alt=""></a>
-                    </td>
+                    <th>ID</th>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Geração</th>
+                    <th>Cor</th>
+                    <th>Valor</th>
+                    <th>Estoque</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
                 </tr>
 
-            <% } %>
+            </thead>
 
-        </tbody>
+            <tbody>
 
-    </table>
+                <% for(let venda of vendas) { %>
 
-</div>
+                    <tr>
+                        <td><%= venda.id %></td>
+                        <td><%= venda.nome %></td>
+                        <td><%= venda.geracao %></td>
+                        <td><%= venda.cor %></td>
+                        <td><%= venda.valor %></td>
+                        <td><%= venda.estoque %></td>
+                        <td><%= venda.descricao %></td>
+                        <td>
+                            <a href="/admin/vendas/editar/<%= venda.id %>">Editar</a>
+                            <a href="/admin/vendas/excluir/<%= venda.id %>">Excluir</a>
+                        </td>
+                    </tr>
+
+                <% } %>
+
+            </tbody>
+
+        </table>
+
+    </div>
 
 </div>

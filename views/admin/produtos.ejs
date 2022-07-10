@@ -2,10 +2,6 @@
 
 <div class="container">
 
-    <div class="area-titulo">
-        <h1>PAINEL ADMINISTRATIVO</h1>
-    </div>
-
     <div class="topo">
         <h2>Produtos</h2>
         <a href="/admin/produtos/cadastrar">Adicionar Novo</a>
@@ -45,7 +41,6 @@
                         <td><%= produto.estoque %></td>
                         <td><%= produto.descricao %></td>
                         <td>
-                            <a href="/admin/produtos/visualizar/<%= produto.id %>">Visualizar</a>
                             <a href="/admin/produtos/editar/<%= produto.id %>">Editar</a>
                             <a href="/admin/produtos/excluir/<%= produto.id %>">Excluir</a>
                         </td>
