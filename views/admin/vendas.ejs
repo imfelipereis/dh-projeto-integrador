@@ -4,12 +4,11 @@
 
     <div class="topo">
         <h2>Vendas</h2>
-        <a href="/admin/vendas/cadastrar">Adicionar Novo</a>
     </div>
 
     <div class="area-tabela">
 
-        <table>
+        <table class="content-table">
 
             <thead>
 
@@ -40,8 +39,8 @@
                         <td><%= venda.estoque %></td>
                         <td><%= venda.descricao %></td>
                         <td>
-                            <a href="/admin/vendas/editar/<%= venda.id %>">Editar</a>
-                            <a href="/admin/vendas/excluir/<%= venda.id %>">Excluir</a>
+                            <a href="/admin/vendas/editar/<%= venda.id %>" class="button-editar">Editar</a>
+                            <a href="/admin/vendas/excluir/<%= venda.id %>" class="button-excluir">Excluir</a>
                         </td>
                     </tr>
 

@@ -9,7 +9,7 @@
 
     <div class="area-tabela">
 
-        <table>
+        <table class="content-table">
 
             <thead>
 
@@ -41,8 +41,9 @@
                         <td><%= produto.estoque %></td>
                         <td><%= produto.descricao %></td>
                         <td>
-                            <a href="/admin/produtos/editar/<%= produto.id %>">Editar</a>
-                            <a href="/admin/produtos/excluir/<%= produto.id %>">Excluir</a>
+                            <a href="/admin/produtos/editar/<%= produto.id %>" class="button-editar">Editar</a>
+                            <br>
+                            <a href="/admin/produtos/excluir/<%= produto.id %>" class="button-excluir">Excluir</a>
                         </td>
                     </tr>
 

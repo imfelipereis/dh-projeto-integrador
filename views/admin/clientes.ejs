@@ -9,7 +9,7 @@
 
     <div class="area-tabela">
 
-        <table>
+        <table class="content-table">
 
             <thead>
 
@@ -35,8 +35,9 @@
                         <td><%= cliente.telefone %></td>
                         <td><%= cliente.situacao_usuario %></td>
                         <td>
-                            <a href="/admin/clientes/editar/<%= cliente.id %>">Editar</a>
-                            <a href="/admin/clientes/excluir/<%= cliente.id %>">Excluir</a>
+                            <a href="/admin/clientes/visualizar/<%= cliente.id %>" class="button-editar">Visualizar</a>
+                            <br>
+                            <a href="/admin/clientes/excluir/<%= cliente.id %>" class="button-excluir">Excluir</a>
                         </td>
                     </tr>
 
