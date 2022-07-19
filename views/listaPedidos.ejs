@@ -1,0 +1,25 @@
+<%- include('./partials/head') %>
+
+<h1>Lista de pedidos</h1>
+
+
+<div>
+
+    <% for(let pedido of listaPedidos){ %>
+        <ul> <%= pedido.id %> </ul>
+        <ul> <%= pedido.status %> </ul>
+        <ul> <%= pedido.total %> </ul>
+        <ul> <%= pedido.data_pedido %> </ul>
+        <ul> <%= pedido.end_entrega %> </ul>
+        <ul> <%= pedido.produtos_id %> </ul>
+        <ul> <%= pedido.forma_pagamento %> </ul>
+        <ul> <%= pedido.tipo_entrega %> </ul>
+        <ul> <%= pedido.usuarios_id %> </ul>
+        <ul> <%= pedido.codigo_rastreio %> </ul>
+
+    <% } %>
+    
+    
+</div>
+
+<%- include('./partials/footer') %>

@@ -8,9 +8,6 @@ const {validationResult} = require('express-validator');
 
 
 
-
-
-
 const PoliticasController = {
     index: (req, res) => {
         let info = {

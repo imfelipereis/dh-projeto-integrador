@@ -25,17 +25,17 @@
 
             <tbody>
 
-                <% for (let cliente in clientes) { %>
+                <% for (let usuario in listaUsuarios) { %>
 
                     <tr>
-                        <td><%= cliente.id %></td>
-                        <td><%= cliente.nome %></td>
-                        <td><%= cliente.telefone %></td>
-                        <td><%= cliente.email %></td>
-                        <td><%= cliente.statusUsuario %></td>
+                        <td><%= usuario.id %></td>
+                        <td><%= usuario.nome %></td>
+                        <td><%= usuario.telefone %></td>
+                        <td><%= usuario.email %></td>
+                        <td><%= usuario.statusUsuario %></td>
                         <td>
-                            <a href="/admin/clientes/visualizar<%= cliente.id %>">Visualizar</a>
-                            <a href="/admin/clientes/editar<%= cliente.id %>">Editar</a>
+                            <a href="/admin/clientes/visualizar<%= usuario.id %>">Visualizar</a>
+                            <a href="/admin/clientes/editar<%= usuario.id %>">Editar</a>
                         </td>
                     </tr>
 

@@ -149,8 +149,15 @@ const AdministracaoController = {
             titulo: 'Editar Cliente',
         };
         return res.render("editar-cliente", info)
-    }
+    },
 
+    usuariosBd: (req, res) => {
+        db.Usuarios.findAll().then((usuarios) => {
+            res.render("listaUsuarios", {
+                listaUsuarios: usuarios
+            }) 
+        })
+    },
 }
 
 module.exports = AdministracaoController;

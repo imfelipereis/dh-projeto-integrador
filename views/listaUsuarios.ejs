@@ -1,0 +1,22 @@
+
+
+<%- include('./partials/head') %>
+
+<h1>Lista de usuarios cadastrados</h1>
+
+
+<div>
+
+    <% for(let usuario of listaUsuarios){ %>
+        <ul> <%= usuario.nome %> </ul>
+        <ul> <%= usuario.sobrenome %> </ul>
+        <ul> <%= usuario.cpf %> </ul>
+        <ul> <%= usuario.email %> </ul>
+        <ul> <%= usuario.telefone %> </ul>
+    <% } %>
+    
+    
+</div>
+
+
+<%- include('./partials/footer') %>

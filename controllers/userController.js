@@ -78,14 +78,26 @@ const controller = {
     },
 
     usuariosBd: (req, res) => {
-        db.Usuarios.findAll().then((resposta) => {
-            res.send(resposta);
+        db.Usuarios.findAll().then((usuarios) => {
+            res.render("listaUsuarios", {
+                listaUsuarios: usuarios
+            }) 
         })
     },
 
     insertUser: (req, res) => {
         res.send("Dados recebidos")
     },
+
+    listaPedidos: (req, res) => {
+        db.Pedidos.findAll().then((pedidos) => {
+            res.render("listaPedidos", {
+                listaPedidos: pedidos
+            })
+        })
+    },
+
+
 
 
     
