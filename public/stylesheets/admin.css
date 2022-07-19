@@ -1,6 +1,19 @@
+.container-dashboard {
+    display: flex;
+}
+
 .atuact {
-    border: 1px solid #1D1D1F;
-    /* border-radius: 25px; */
+    width: 25%;
+    height: 200px;
+
+    margin: 0 auto;
+
+    border: 2px solid #1D1D1F;
+    border-radius: 25px;
+}
+
+.atuact a {
+    color: #1D1D1F;
 }
 
 .content-table {

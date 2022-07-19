@@ -4,6 +4,8 @@ var router = express.Router();
 var PoliticasController = require('../controllers/PoliticasController');
 const userController = require('../controllers/userController');
 const AdministracaoController = require('../controllers/AdministracaoController');
+const ProductsController = require('../controllers/ProductsController');
+
 const path = require("path");
 const {check} = require("express-validator");
 const {body} = require("express-validator");
@@ -35,7 +37,9 @@ router.post('/acaoCadastro', userController.processRegister);
 
 
 
+// Teste Produtos
 
+router.get("/", ProductsController.detalheProduto);
 
 
 // Área do Carrinho

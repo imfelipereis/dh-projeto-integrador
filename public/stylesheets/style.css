@@ -68,7 +68,7 @@ nav li {
 
 /* Área do Carrossel */
 
-section.banner .carousel>img{
+/* section.banner .carousel>img{
     width: 100%;
 }
 
@@ -108,9 +108,7 @@ section.banner .carousel .controls button img {
     display: flex;
     justify-content: left;
     justify-items: flex-start;
-
-}
-
+} */
 
 /* Área dos Títulos */
 
@@ -159,6 +157,7 @@ section.banner .carousel .controls button img {
 
 /* Área dos Produtos */
 
+.saiba,
 .saiba-mais,
 .produto a{
     background-color: #D65A31;
@@ -225,77 +224,71 @@ section.banner .carousel .controls button img {
 }
 
 .div-cliente {
-    /* border: 1px solid red; */
-    margin-right: 40px;
-    padding: 50px;
-    justify-content: space-between;
 
+    width: 25%;
+    margin: 10px;
+
+    border: 1px solid black;
+
+    display: grid;
+
+    align-items: center;
+    justify-content: space-between;
 }
 
-.clientes .cliente img {
+.img-profile {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-profile img {
+    margin-left: 60px;
     border-radius: 150px;
     width: 150px;
     height: 150px;
 }
 
-.clientes .cliente .nome-cliente {
+.nome-cliente {
     width: 100%;
     text-align: center;
     font-weight: 500;
     font-size: 11px;
 }
 
-.clientes .cliente .comentario-cliente {
-    width: 100%;
+.comentario-cliente {
+    width: 85%;
     text-align: center;
     font-weight: 300;
     font-size: 13px;
-    /* border: 1px solid green; */
 }
 
 /* Área do Newsletter */
 
 .newsletter {
+    background-color: #C4C4C4;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items:flex-end;
-    background-color:#D65A31;
-    height: 110px;
+    height: 100px;
 
+    align-items: center;
+    justify-content: center;
 }
 
 .newsletter h2 {
-    font-size: 18px;
-    font-weight: 400;
-    
+    margin: 30px;
 }
 
 .newsletter input {
-    margin-left: 1px;
     height: 30px;
-    border: none;
-    flex-direction: row;
-    align-items:flex-end;
-    margin-top: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-
+    border: 1px solid #D65A31;
 }
 
-.button-cadastrar {
-    margin-top: 1px;
-    border-radius: 10px;
-    justify-items: baseline;
-    height: 30px;
-    margin-left: 1px;
-    display: block;
+.newsletter button {
+    border: 1px solid #D65A31;
+    background-color: #D65A31;
+    height: 34px;
+    font-weight: bold;
     cursor: pointer;
-    flex-direction: row;
-    align-items: flex-end;
-
 }
-
 
 /* Área do Footer */
 
@@ -340,9 +333,8 @@ footer {
     font-weight: 100;
     justify-content: space-around;
     align-items: center;
-
+    height: 20px;
 }
-
 
 .paineis{
     margin-left: 12%;
@@ -357,11 +349,6 @@ footer {
     height: 600px;
     margin-right: 65px;
     justify-content:center;
-}
-
-.painel-direito{
-    
-
 }
 
 .foto-usuario img{
@@ -387,10 +374,6 @@ footer {
 .produtos-assinados img{
 margin-top: 15px;
 margin-left: 10px;
-}
-
-.botoes-produto{
-    
 }
 
 .btn-alterar{
@@ -492,6 +475,14 @@ body container section h2{
     display: flex;
     justify-content: center;
 }
+
+.produto,
+.titulo-prod,
+.geracao-prod,
+.valor-prod {
+    text-align: center;
+}
+
 .produto-1,
 .produto-2,
 .produto-3{
@@ -506,17 +497,17 @@ body container section h2{
     width: 20vh;
     margin-bottom: 5vh;
     background-color: #D65A31;
-    box-shadow: #094C66 4px 4px 0px;
+    /* box-shadow: #094C66 4px 4px 0px; */
     border-radius: 8px;
-    transition: transform 200ms, box-shadow 200ms;
+    /* transition: transform 200ms, box-shadow 200ms; */
 }
 
-.saiba-mais:active{
+/* .saiba-mais:active{
     transform: translateY(4px) translateX(4px);
     box-shadow: #094C66 0px 0px 0px;
-}
+} */
 
-.saiba-mais-1 {
+/* .saiba-mais-1 {
     background-color: #D65A31;
     padding: 10px;
     height: 5vh;
@@ -530,7 +521,7 @@ body container section h2{
 .saiba-mais-1:active {
     transform: translateY(4px) translateX(4px);
     box-shadow: #094C66 0px 0px 0px;
-}
+} */
 
 .barra-pesquisa{
    margin: 5%;
@@ -555,10 +546,6 @@ body container section h2{
     display: flex;
     font-family: 'Montserrat', sans-serif;
     
-}
-
-.login{
-
 }
 
 .input-login-email{
@@ -622,11 +609,6 @@ body container section h2{
     transform: translateY(4px) translateX(4px);
     box-shadow: #094c66 0px 0px 0px;
 }
-
-.formulario-cadastro{
-
-}
-
 
 .cadastro-usuario{ 
     display: flex;
@@ -879,3 +861,118 @@ form{
 
 }
 
+/* Teste da Partials Produtos */
+
+.area-produtos {
+    display: flex;
+}
+
+.produto {
+
+    box-sizing: border-box;
+
+    border: 1px solid black;
+
+    display: grid;
+
+    width: 25%;
+
+    margin: 10px;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titulo-produto h1 {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.subtitulo-produto {
+    height: 50vh auto;
+}
+
+.subtitulo-produto h4 {
+    font-size: 14px;
+    margin: 10px;
+}
+
+.valor-produto h1 {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.parcela-produto p {
+    font-size: 12px;
+    margin: 10px;
+}
+
+.button-produto button {
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bold;
+    background-color: #D65A31;
+    color: #1D1D1F;
+
+    padding: 15px;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+/* Teste da Partials Área do Carrossel */
+
+section.banner .carousel>img{
+    width: 100%;
+}
+
+section.banner .carousel{
+    position: relative;
+}
+
+section.banner .carousel .controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-between;
+    
+}
+
+
+section.banner .carousel .controls button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    width: 85px;
+    height: 100%;
+    margin: 20px;
+    cursor: pointer;
+}
+
+section.banner .carousel .controls button img {
+    width: 30px;
+}
+
+.saiba-mais button {
+    background-color: #D65A31;
+}
+
+/* Teste do Banner */
+
+.carousel-container {
+    width: 60%;
+    margin: auto;
+
+    border: 2px solid black;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}

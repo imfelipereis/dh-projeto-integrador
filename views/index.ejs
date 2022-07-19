@@ -1,6 +1,8 @@
 <%- include('./partials/head') %>
 
-    <section class="banner">
+<%- include('./partials/banner') %>
+
+    <!-- <section class="banner">
         <div class="carousel">
             <img src="/images/carousel/img-1.jpg" alt="">
             <div class="controls">
@@ -21,7 +23,7 @@
             </div>
         </div>
 
-        <!-- <div class="carousel">
+        <div class="carousel">
             <img src="/img/carrossel/img-2.png" alt="">
             <div class="controls">
                 <button><img src="/img/icons/left.png" alt=""></button>
@@ -35,9 +37,9 @@
                     </div>
                 <button><img src="/img/icons/right.png" alt=""></button>
             </div>
-        </div> -->
+        </div>
 
-        <!-- <div class="carousel">
+        <div class="carousel">
             <img src="/img/carrossel/img-3.png" alt="">
             <div class="controls">
                 <button><img src="/img/icons/left.png" alt=""></button>
@@ -51,9 +53,9 @@
                     </div>
                 <button><img src="/img/icons/right.png" alt=""></button>
             </div>
-        </div> -->
+        </div>
 
-    </section>
+    </section> -->
 
     <section class="programa">
 
@@ -109,7 +111,9 @@
 
     </section>
 
-    <section class="produtos">
+    <%- include('./partials/produtos') %>
+
+    <!-- <section class="produtos">
 
         <div class="container">
 
@@ -167,7 +171,7 @@
                     <h1>Aipods</h1>
                 </div>
                 <div class="geracao-prod">
-                    <h4>Nova geração</h4>
+                    <h4></h4>
                 </div>
                 <div class="valor-prod">
                     <h1>R$499,00</h1>
@@ -179,6 +183,7 @@
                     Saiba mais
                 </button>
             </div>
+            
             <div class="produto-3">
                 <div class="img-prod">
                     <img src="/images/produtos/produto-1.png" alt="" width="85%" height="90%">
@@ -187,7 +192,7 @@
                     <h1>Aipods Max</h1>
                 </div>
                 <div class="geracao-prod">
-                    <h4>Nova geração</h4>
+                    <h4></h4>
                 </div>
                 <div class="valor-prod">
                     <h1>R$799,00</h1>
@@ -203,178 +208,10 @@
         </section>
         </div>
 
-    </section>
+    </section> -->
 
-    <section class="clientes">
+<%- include('./partials/comentariosClientes') %>
 
-        <div class="container">
-
-            <div class="barra-titulo">
-                <h1>O que os nossos clientes estão falando</h1>
-            </div>
-
-            <section class="cliente">
-
-                <div class="div-cliente">
-
-                    <div class="img-profile">
-                        <img src="/images/clientes/alan-vitorino.png" alt="">
-                    </div>
-
-                    <div class="nome-cliente">
-                        <h2>Felipe Carvalho</h2>
-                    </div>
-
-                    <div class="comentario-cliente">
-                        <p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="div-cliente">
-
-                    <div class="img-profile">
-                        <img src="/images/clientes/allyson-fernandes.png" alt="">
-                    </div>
-
-                    <div class="nome-cliente">
-                        <h2>Igor Müller</h2>
-                    </div>
-
-                    <div class="comentario-cliente">
-                        <p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="div-cliente">
-
-                    <div class="img-profile">
-                        <img src="/images/clientes/danilo-reis.png" alt="">
-                    </div>
-
-                    <div class="nome-cliente">
-                        <h2>Myllena Lucena</h2>
-                    </div>
-
-                    <div class="comentario-cliente">
-                        <p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="div-cliente">
-
-                    <div class="img-profile">
-                        <img src="/images/clientes/igor-muller.png" alt="">
-                    </div>
-
-                    <div class="nome-cliente">
-                        <h2>Silvio Fernandes</h2>
-                    </div>
-
-                    <div class="comentario-cliente">
-                        <p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”
-                        </p>
-                    </div>
-
-                </div>
-
-                <!-- <div class="div-cliente">
-
-                    <div class="img-profile">
-                        <img src="/img/clientes/felipe-carvalho.png" alt="">
-                    </div>
-
-                    <div class="nome-cliente">
-                        <h2>Felipe Carvalho</h2>
-                    </div>
-
-                    <div class="comentario-cliente">
-                        <p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="div-cliente">
-
-                    <div class="img-profile">
-                        <img src="/img/clientes/myllena-lucena.png" alt="">
-                    </div>
-
-                    <div class="nome-cliente">
-                        <h2>Myllena Lucena</h2>
-                    </div>
-
-                    <div class="comentario-cliente">
-                        <p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="div-cliente">
-
-                    <div class="img-profile">
-                        <img src="/img/clientes/silvio-fernandes.png" alt="">
-                    </div>
-
-                    <div class="nome-cliente">
-                        <h2>Silvio Fernandes</h2>
-                    </div>
-
-                    <div class="comentario-cliente">
-                        <p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="div-cliente">
-
-                    <div class="img-profile">
-                        <img src="/img/clientes/allyson-fernandes.png" alt="">
-                    </div>
-
-                    <div class="nome-cliente">
-                        <h2>Wendel Santos</h2>
-                    </div>
-
-                    <div class="comentario-cliente">
-                        <p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”
-                        </p>
-                    </div>
-
-                </div> -->
-
-            </section>
-
-        </div>
-
-    </section>
-
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter">
-                <h2>Assine nossa Newsletter</h2>
-                <form action="" class="cadastrar-newsletter">
-                    <input type="email" placeholder="Digite seu e-mail">
-                    <button>Cadastrar</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<%- include('./partials/newsletter') %>
 
 <%- include('./partials/footer') %>
