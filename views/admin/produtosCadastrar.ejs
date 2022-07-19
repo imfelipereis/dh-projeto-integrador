@@ -1,0 +1,67 @@
+<%- include("../admin/partials/header") %>
+
+<div class="container">
+
+    <div class="topo">
+        <h2>Dados do Novo Produto</h2>
+    </div>
+
+    <div class="area-formulario">
+
+        <form action="/admin/produtos/acaoCadastrar" method="POST" enctype="multipart/form-data" class="cadastroProduto">
+
+            <div>
+                <label for="id">ID:</label>
+                <input type="text" name="id" id="id">
+            </div>
+
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+
+            <div>
+                <label for="geracao">Geração:</label>
+                <input type="text" name="geracao" id="geracao">
+            </div>
+
+            <div>
+                <label for="valor">Preço:</label>
+                <input type="number" name="valor" id="valor" mask="0,00" inputmode="numeric">
+            </div>
+            <div>
+                <label for="cor">Cor:</label>
+                <select name="cor" id="cor">
+                    <option selected disabled>Selecione</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                    <option value="Spacegray">Spacegray</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Green">Green</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Skyblue">Skyblue</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="estoque">Estoque:</label>
+                <input type="number" name="estoque" id="estoque">
+            </div>
+
+            <div>
+                <label for="descricao">Descrição:</label>
+                <textarea name="descricao" id="descricao"></textarea>
+            </div>
+
+            <div>
+                <label for="imagemProduto">Imagem do Produto</label>
+                <input type="file" name="imagemProduto" id="imagemProduto">
+            </div>
+
+            <button type="submit">Cadastrar</button>
+
+        </form>
+
+    </div>
+
+</div>

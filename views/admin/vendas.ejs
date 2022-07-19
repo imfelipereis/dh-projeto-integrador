@@ -1,0 +1,55 @@
+<%- include("../admin/partials/header") %>
+
+<div class="container">
+
+    <div class="topo">
+        <h2>Vendas</h2>
+    </div>
+
+    <div class="area-tabela">
+
+        <table class="content-table">
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Geração</th>
+                    <th>Cor</th>
+                    <th>Valor</th>
+                    <th>Estoque</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <% for(let venda of vendas) { %>
+
+                    <tr>
+                        <td><%= venda.id %></td>
+                        <td><%= venda.nome %></td>
+                        <td><%= venda.geracao %></td>
+                        <td><%= venda.cor %></td>
+                        <td><%= venda.valor %></td>
+                        <td><%= venda.estoque %></td>
+                        <td><%= venda.descricao %></td>
+                        <td>
+                            <a href="/admin/vendas/editar/<%= venda.id %>" class="button-editar">Editar</a>
+                            <a href="/admin/vendas/excluir/<%= venda.id %>" class="button-excluir">Excluir</a>
+                        </td>
+                    </tr>
+
+                <% } %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

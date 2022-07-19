@@ -1,0 +1,167 @@
+<%- include('../admin/partials/header') %>
+
+<div class="container">
+
+    <div>
+        <h1> Cadastrar Novo Cliente </h1>
+    </div>
+
+    <div class="cadastrar-cliente">
+
+        <form action="/admin/clientes/acaoCadastrar" method="POST" enctype="multipart/form-data">
+
+            <div class="dados-usuario">
+
+                <div>
+                    <h3>Dados do Usuário</h3>
+                </div>
+
+                <div>
+                    <label for="id">ID:</label>
+                    <input type="text" name="id" id="id">
+                </div>
+
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome">
+                </div>
+
+                <div>
+                    <label for="">Sobrenome:</label>
+                    <input type="text" name="sobrenome">
+                </div>
+
+                <div>
+                    <label for="">CPF:</label>
+                    <input type="text" name="cpf">
+                </div>
+
+                <div>
+                    <label for="">Data de Nascimento:</label>
+                    <input type="date" name="data_nascimento">
+                </div>
+
+                <div>
+                    <label for="">E-mail:</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div>
+                    <label for="">Telefone:</label>
+                    <input type="text" name="telefone">
+                </div>
+
+                <div>
+                    <label for="">Situação Usuário:</label>
+                    <select name="situacao_usuario" id="">
+                        <option value="ativo">Ativo</option>
+                        <option value="desativo">Desativo</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="">Tipo de Usuário:</label>
+                    <select name="usuario_adm" id="">
+                        <option value="Não">Cliente</option>
+                        <option value="Sim">Administrador</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="enderecoCliente">
+                <div class="subtitulo-admin">
+                    <h3>Endereço de Entrega</h3>
+                </div>
+
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input type="text" mask="99999-999" inputmode="numeric" maxlength="9" placeholder="_____-___" name="cep" id="cep">
+                </div>
+
+                <div>
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" name="logradouro" id="logradouro">
+                </div>
+
+                <div>
+                    <label for="numero">Número:</label>
+                    <input type="text" name="numero" id="numero">
+                </div>
+
+                <div>
+
+                    <label for="">Complemento:</label>
+                    <input type="text" name="complemento">
+
+                </div>
+
+                <div>
+
+                    <label for="">Ponto de Referência:</label>
+                    <input type="text" name="ponto_referencia">
+
+                </div> 
+
+                <div>
+
+                    <label for="">Bairro:</label>
+                    <input type="text" name="bairro">
+
+                </div>
+
+                <div>
+
+                    <label for="">Cidade</label>
+                    <input type="text" name="cidade">
+
+                </div>
+
+                <div>
+
+                    <label for="">Estado:</label>
+                    <select name="estado" id="">
+                        <option value="ac">Acre</option>
+                        <option value="al">Alagoas</option>
+                        <option value="ap">Amapá</option>
+                        <option value="am">Amazonas</option>
+                        <option value="ba">Bahia</option>
+                        <option value="ce">Ceará</option>
+                        <option value="df">Distrito Federal</option>
+                        <option value="es">Espírito Santo</option>
+                        <option value="go">Goiás</option>
+                        <option value="ma">Maranhão</option>
+                        <option value="mt">Mato Grosso</option>
+                        <option value="ms">Mato Grosso do Sul</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="pr">Paraná</option>
+                        <option value="pb">Paraíba</option>
+                        <option value="pa">Pará</option>
+                        <option value="pe">Pernambuco</option>
+                        <option value="pi">Piauí</option>
+                        <option value="rn">Rio Grande do Norte</option>
+                        <option value="rs">Rio Grande do Sul</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="ro">Rondônia</option>
+                        <option value="rr">Roraima</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="se">Sergipe</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="to">Tocantins</option>
+                    </select>
+
+                </div>
+
+                
+            </div>
+
+            <div class="botoes-acao">
+                <button> Cancelar </button>
+                <button type="submit" > Cadastrar </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

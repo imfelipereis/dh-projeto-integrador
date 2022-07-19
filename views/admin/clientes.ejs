@@ -1,26 +1,27 @@
-<%- include('./admin/partials/header') %>
+<%- include("../admin/partials/header") %>
 
 <div class="container">
 
-    <h1> Clientes </h1>
-
-    <div>
-        <h3><a href="/clientes/cadastrar">Adicionar Novo Cliente</a></h3>
+    <div class="topo">
+        <h2>Clientes</h2>
+        <a href="/admin/clientes/cadastrar">Adicionar Novo</a>
     </div>
 
-    <div class="tabela-clientes">
+    <div class="area-tabela">
 
-        <table>
+        <table class="content-table">
 
             <thead>
+
                 <tr>
                     <th>ID</th>
-                    <th>Cliente</th>
+                    <th>Nome</th>
+                    <th>Email</th>
                     <th>Telefone</th>
-                    <th>E-mail</th>
                     <th>Situação Usuário</th>
                     <th>Ações</th>
                 </tr>
+
             </thead>
 
             <tbody>
