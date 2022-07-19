@@ -6,7 +6,7 @@ const AdministracaoController = {
         let info = {
             titulo: 'Página Administrativa',
         };
-        return res.render("dashboard", info);
+        return res.render("admin/dashboard", info);
     },
 
     // vendas: (req, res) => {
