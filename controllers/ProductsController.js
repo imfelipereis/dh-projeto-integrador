@@ -66,6 +66,8 @@ const listaProdutos = [
 
 var express = require('express');
 var router = express.Router();
+const db = require("../database/models");
+
 
 let produtos = [];
 
@@ -83,24 +85,24 @@ const ProductsController = {
 
     acaoCadastrar: (req, res) => {
 
-        const id = req.body.id;
-        const nome = req.body.nome;
+        const id_produtos = req.body.id_produtos;
+        const nome_produto = req.body.nome_produto;
         const geracao = req.body.geracao;
         const cor = req.body.cor;
         const valor = req.body.valor;
-        const estoque = req.body.estoque;
+        const qtd_estoque = req.body.qtd_estoque;
         const descricao = req.body.descricao;
-        const imagem = req.file.filename;
+        const imagens = req.body.imagens;
 
         const objProduto = {
-            id: id,
-            nome: nome,
+            id_produtos: id_produtos,
+            nome_produto: nome_produto,
             geracao: geracao,
             cor: cor,
             valor: valor,
-            estoque: estoque,
+            qtd_estoque: qtd_estoque,
             descricao: descricao,
-            imagem: imagem
+            imagens: imagens
         }
 
         produtos.push(objProduto);
@@ -113,7 +115,7 @@ const ProductsController = {
     },
 
     acaoExcluir: (req, res) => {
-        produtos = produtos.filter((produto) => produto.id != req.params.idProduto);
+        produtos = produtos.filter((produto) => produto.id_produtos != req.params['idProduto']);
 
         res.redirect("/admin/produtos");
     },
@@ -128,6 +130,14 @@ const ProductsController = {
         let produto = listaProdutos.find(produto => produto.id == req.params.id)
         res.render("descricaoProduto", {produto: produto})
     },
+
+    produtosBd: (req, res) => {
+        db.Produtos.findAll().then((produtos) => {
+            res.render("listaProdutos", {
+                listaProdutos: produtos
+            }) 
+        })
+    }
 }
 
 module.exports = ProductsController;

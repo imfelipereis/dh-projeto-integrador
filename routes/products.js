@@ -32,4 +32,8 @@ router.get('/descricaoProduto', ProductsController.descricaoProduto)
 router.get('/descricaoProduto/:id', ProductsController.detalheProduto)
 
 
+router.get('/produtos', ProductsController.produtosBd)
+
+
+
 module.exports = router;
