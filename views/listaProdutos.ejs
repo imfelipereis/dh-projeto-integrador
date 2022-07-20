@@ -1,0 +1,21 @@
+
+<%- include('./partials/head') %>
+
+<h1>Lista de produtos cadastrados</h1>
+
+
+<div>
+
+    <% for(let produtos of listaProdutos){ %>
+        <ul> <%= produtos.nome_produto %> </ul>
+        <ul> <%= produtos.geracao %> </ul>
+        <ul> <%= produtos.cor %> </ul>
+    <% } %>
+    
+    
+</div>
+
+
+<%- include('./partials/footer') %>
+
+
