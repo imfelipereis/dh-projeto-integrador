@@ -1131,3 +1131,25 @@ section.banner .carousel .controls button img {
 
     cursor: pointer;
 }
+
+/*Área teste Procurar*/
+
+.barra-pesquisar {   
+    margin: 0;
+    height: 30vh;
+    width: 100vw;
+
+
+}
+
+.texto-pesquisa {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(50%, -50%);
+
+    padding: 1px;
+    height: 34px;
+
+}
+
