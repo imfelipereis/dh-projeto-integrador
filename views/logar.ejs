@@ -2,7 +2,7 @@
 
 
 
-<div class="caixa-login">
+<!-- <div class="caixa-login">
   <h3>Faça seu login </h3>
       
 
@@ -53,9 +53,79 @@
       </a>
     </div>
     
-  </div>
+  </div> -->
 
+  <section>
 
+    <div class="container">
 
+        <div class="container-login">
+
+            <div class="area">
+
+                <div class="area-titulo">
+                    <h1>Ainda não é cliente?</h1>
+                </div>
+
+                <div class="area-texto">
+                    <p>Cadastre sua conta.</p>
+                </div>
+
+                <div class="area-texto">
+                    <p>Ao cadastrar sua conta, você será capaz de comprar mais rápido, ficar atualizado sobre
+                        a situação de um pedido e acompanhar o histórico dos pedidos que você já fez.
+                    </p>
+                </div>
+
+                <div class="button">
+                    <a href="/cadastrar"><button>Cadastre-se</button></a>
+                </div>
+
+            </div>
+
+            <div class="area">
+
+                <div class="area-titulo">
+                    <h1>Já é cliente?</h1>
+                </div>
+
+                <div class="area-texto">
+                    <p>Se você já fez um pedido e cadastrou uma conta, coloque os dados da conta abaixo:</p>
+                </div>
+
+                <div class="area-email">
+                    <label for="email">E-mail:</label>
+                    <br>
+                    <input type="email" name="email" id="" placeholder="E-mail">
+                </div>
+
+                <div class="area-senha">
+                    <label for="password">Senha:</label>
+                    <br>
+                    <input type="password" name="password" id="" placeholder="Senha">
+
+                    <% if(locals.errors && errors.psw){ %>  
+                        <div class="danger"><%= errors.psw.msg %></div>
+                      <% } %>
+
+                </div>
+
+                <div>
+                    <a href="">Solicitar nova senha</a>
+                </div>
+
+                <div class="button">
+                    <button>Login</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<%- include('./partials/newsletter') %>
 
 <%- include('./partials/footer') %>

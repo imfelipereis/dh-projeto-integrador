@@ -228,8 +228,6 @@ section.banner .carousel .controls button img {
     width: 25%;
     margin: 10px;
 
-    border: 1px solid black;
-
     display: grid;
 
     align-items: center;
@@ -256,7 +254,7 @@ section.banner .carousel .controls button img {
 }
 
 .comentario-cliente {
-    width: 85%;
+    width: 100%;
     text-align: center;
     font-weight: 300;
     font-size: 13px;
@@ -871,8 +869,6 @@ form{
 
     box-sizing: border-box;
 
-    border: 1px solid black;
-
     display: grid;
 
     width: 25%;
@@ -975,4 +971,163 @@ section.banner .carousel .controls button img {
     display: flex;
     width: 100%;
     height: 500px;
+}
+
+/* Teste Tela de Login */
+
+.container-login {
+    display: flex;
+
+    align-items: left;
+    justify-content: left;
+
+    width: 100%;
+}
+
+.area {
+    width: 50%;
+    margin: 50px;
+}
+
+.area-subtitulo {
+    text-align: left;
+    font-size: 10px;
+}
+
+.area-texto {
+    text-align: justify;
+}
+
+.area-email,
+.area-senha {
+    width: 100%;
+}
+
+.area-email,
+.area-senha, label {
+    font-weight: bold;
+}
+
+.area a {
+    color: #1D1D1F;
+}
+
+.area input {
+    border: 1px solid #C4C4C4;
+    width: 60%;
+    height: 30px;
+    padding-left: 7px;
+    margin: 10px 0 10px 0;
+}
+
+.area button {
+    font-weight: bold;
+    border: 1px solid #D65A31;
+    background-color: #D65A31;
+    padding: 10px 30px 10px 30px;
+
+    margin-top: 15px;
+
+    cursor: pointer;
+}
+
+/* Teste Área Cadastrar Usuário */
+
+.container-cadastrar {
+    display: grid;
+
+    margin: 0 auto;
+
+    padding: 25px;
+}
+
+.titulo-cadastro-usuario {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+
+    padding: 20px;
+}
+
+.subtitulo-cadastro-user {
+    text-align: left;
+}
+
+.formulario-cadastro-usuario {
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px;
+
+    align-items: right;
+    justify-content: right;
+}
+
+.formulario-cadastro-usuario input {
+    height: 30px;
+
+    border: 1px solid #1D1D1F;
+
+    margin-left: 15px;
+
+    width: 85%;
+}
+
+.formulario-cadastro-usuario select {
+    height: 35px;
+
+    border: 1px solid #1D1D1F;
+
+    margin-left: 15px;
+
+    width: 85%;
+}
+
+.button-validarcep {
+    background-color: #1D1D1F;
+    border: 1px solid #1D1D1F;
+
+    color: #EEEEEE;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.area-formulario label {
+    font-weight: 400;
+    color: black;
+}
+
+.cadastro-teste {
+    display: flex;
+
+    align-items: right;
+    justify-content: right;
+
+    margin: 15px;
+}
+
+.cadastro-teste-ext {
+    display: flex;
+
+    align-items: right;
+    justify-content: right;
+
+    margin: 15px;
+}
+
+.cadastro-teste-ext input {
+    width: 80%;
+}
+
+.button-cadastraruser {
+    background-color: #1D1D1F;
+    border: 1px solid #1D1D1F;
+
+    color: #EEEEEE;
+    font-weight: bold;
+
+    padding: 10px 25px 10px 25px;
+
+    cursor: pointer;
 }
