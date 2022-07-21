@@ -521,30 +521,73 @@ body container section h2{
     box-shadow: #094C66 0px 0px 0px;
 } */
 
-.barra-pesquisa{
-   margin: 5%;
-   height: 3vh;
-   width: 24vw;
-   left: 1%;
-   border-radius: 30px;
-   margin-left: 12%;
 
-}
-
-.barra-texto{
-    position: absolute;
-    top: 12%;
-    left: 56%;
-    transform: translate(-50%, 50%);
-    background: #D65A31;
-    height: 30px;
-    padding: 10px;
-    border-radius: 40px;
-    justify-content: space-between;
+.body-pesquisar {   
+    margin: 0;
+    margin-bottom: 5%;
+    margin-top: 0;
     display: flex;
-    font-family: 'Montserrat', sans-serif;
-    
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
 }
+
+.barra-pesquisar {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #1D1D1F;
+    padding: 10px;
+    height: 40px;
+    width: 40vh;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 16px;
+
+}    
+
+.texto-pesquisar {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 40px;
+
+    width: 0;
+    transition: 0,4;
+
+}
+
+.button-pesquisar {
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 1px;
+
+    display: flex;
+    justify-content: center;
+    background-color: #D65A31;
+    cursor: pointer;
+
+}
+
+.barra-pesquisar:hover > .texto-pesquisar {
+    width: 330px;
+    padding-left: 30px;
+
+}
+
 
 .input-login-email{
     margin-left: 40%;
@@ -1131,60 +1174,3 @@ section.banner .carousel .controls button img {
 
     cursor: pointer;
 }
-
-/*Área teste Procurar*/
-
-/* .body-pesquisar {   
-    margin: 0;
-    height: 30vh;
-    width: 100vw;
-    
-}
-
-.barra-pesquisar {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color: #EEEEEE;
-    padding: 10px;
-    height: 50px;
-    border-radius: 5%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.texto-pesquisar {
-    background: none;
-    border: 0;
-    outline: 0;
-    padding: 0;
-
-    font-size: 16px;
-
-    width: 0;
-    transition: 0,4;
-
-}
-
-.button-pesquisar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-
-    display: flex;
-    justify-content: center;
-    background-color: #D65A31;
-    cursor: pointer;
-
-}
-
-.barra-pesquisar:hover > .texto-pesquisar {
-    width: 320px;
-    padding-left: 25px;
-}
- */
