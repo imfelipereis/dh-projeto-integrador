@@ -17,11 +17,9 @@ router.get('/cadastrar', userController.register);
 router.post('/acaoCadastrar', uploadFile.single('avatar'), validations, userController.processRegister);
 
 //Formulario Login
-router.get('/logar', userController.login);
+
 
 //Processamento Login
-router.post('/acaoLogar', userController.loginProcess);
-
 router.get('/profile', userController.profile);
 
 //pagina usuario

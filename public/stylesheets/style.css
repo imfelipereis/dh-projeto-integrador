@@ -1188,3 +1188,11 @@ section.banner .carousel .controls button img {
     padding-left: 25px;
 }
 
+.alert-danger{
+    justify-content:baseline;
+    height: 7%;
+    background-color: red;
+    max-width: fit-content;
+    opacity: 0.8;
+}
+

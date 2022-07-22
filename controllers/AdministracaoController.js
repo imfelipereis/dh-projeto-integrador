@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const db = require ("../database/models/")
+const bcrypt = require("bcryptjs");
 
 const AdministracaoController = {
     dashboard: (req, res) => {
@@ -158,6 +160,31 @@ const AdministracaoController = {
             }) 
         })
     },
+
+    logar: (req, res) =>{
+       res.render("logar")
+    },
+
+    logarAcao: async function (req, res){
+        const { email, senha } = req.body;
+
+        const usuarioEncontrado = await db.Admin.findOne({where: {email: email} })
+
+        if ( usuarioEncontrado == null) {
+            res.render("logar", {error: ["    Usuario ou senha invalidos"] });
+            return
+        }
+        if (!bcrypt.compareSync(senha, usuarioEncontrado.senha)){
+            res.render("logar", {error: ["    Usuario ou senha inválidos"] });
+            return;
+        }
+
+        req.session.email = usuarioEncontrado.email;
+        req.session.nome = usuarioEncontrado.nome;
+
+        res.redirect("admin/dashboard")
+        
+    }
 }
 
 module.exports = AdministracaoController;

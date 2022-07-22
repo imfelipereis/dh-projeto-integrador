@@ -3,7 +3,7 @@ const User = require('../models/User')
 const bcrypt = require('bcrypt');
 const { findUserByField } = require('../models/User');
 const fs = require ('fs')
-const db = require("../database/models")
+
 
 let findUserByEmail = function (email){
     let todosUsuarios = this.getUsers();
@@ -55,20 +55,7 @@ const controller = {
     profile:(req, res) => {
         return res.render("profile")
     },
-
-    login: (req, res) => {
-        return res.render("logar")
-    },
-
     
-    loginProcess: (req, res) =>{
-
-        let userToLogin = User.findUserByField('email', req.body.email);
-
-        
-        
-        return res.render()
-    },
     painelUsuario: (req, res) =>{
         return res.render("pagina-usuario")
     },

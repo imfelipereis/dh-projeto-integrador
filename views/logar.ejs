@@ -89,10 +89,22 @@
                     <h1>Já é cliente?</h1>
                 </div>
 
+                
+                <% if (typeof(error) != "undefined"){ %>
+                <div class="alert-danger">
+                  <% for(let i = 0; i < error.length; i++){ %>
+                    <%= error[i] %>
+                    <% } %>
+                    
+                </div>
+                <% } %>
+
+
+
                 <div class="area-texto">
                     <p>Se você já fez um pedido e cadastrou uma conta, coloque os dados da conta abaixo:</p>
                 </div>
-
+              <form action="logarAcao" method="POST" href="/admin">
                 <div class="area-email">
                     <label for="email">E-mail:</label>
                     <br>
@@ -102,7 +114,7 @@
                 <div class="area-senha">
                     <label for="password">Senha:</label>
                     <br>
-                    <input type="password" name="password" id="" placeholder="Senha">
+                    <input type="password" name="senha" id="" placeholder="Senha">
 
                     <% if(locals.errors && errors.psw){ %>  
                         <div class="danger"><%= errors.psw.msg %></div>
@@ -115,9 +127,9 @@
                 </div>
 
                 <div class="button">
-                    <button>Login</button>
+                    <button type="submit">Login</button>
                 </div>
-
+              </form>
             </div>
 
         </div>
