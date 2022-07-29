@@ -4,7 +4,8 @@ module.exports= {
     "password": "",
     "database": "fonesempre_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "dialectModule": require("mysql2")
   },
   "test": {
     "username": "root",
