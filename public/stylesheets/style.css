@@ -114,12 +114,13 @@ section.banner .carousel .controls button img {
 
 .barra-titulo {
     text-align: center;
-    font-weight: 350;
-    font-size: 22px;
-    height: 60px;
-    margin: 60px;
+    font-weight: 300;
+    font-size: 23px;
+    height: 40px;
+    margin: 50px;
+    left: 50%;
     justify-content: center;
-    display: flex;
+    
 }
 
 /* Área de Apresentação */
@@ -1179,10 +1180,12 @@ section.banner .carousel .controls button img {
 
 .body-pesquisar {   
     margin: 0;
-    height: 30vh;
-    width: 100vw;
+    height: 110vh;
+    width: 110vw;
     
 }
+
+
 
 .barra-pesquisar {
     position: absolute;
@@ -1191,8 +1194,8 @@ section.banner .carousel .controls button img {
     transform: translate(-50%, -50%);
 
     background-color: #EEEEEE;
-    padding: 10px;
-    height: 50px;
+    padding: 40px;
+    height: 10px;
     border-radius: 5%;
 
     display: flex;
