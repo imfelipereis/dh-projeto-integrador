@@ -1,3 +1,5 @@
+const db = require ("../database/models/")
+
 const listaProdutos = [
     {
      "id": 1,
@@ -83,28 +85,26 @@ const ProductsController = {
         res.render("admin/produtosCadastrar");
     },
 
-    acaoCadastrar: (req, res) => {
+    acaoCadastrar: async (req, res) => {
 
-        const id_produtos = req.body.id_produtos;
-        const nome_produto = req.body.nome_produto;
+        const id = req.body.id;
+        const image = req.body.image;
+        const nome = req.body.nome;
         const geracao = req.body.geracao;
-        const cor = req.body.cor;
-        const valor = req.body.valor;
-        const qtd_estoque = req.body.qtd_estoque;
+        const preco = req.body.preco;
+        const estoque = req.body.estoque;
         const descricao = req.body.descricao;
-        const imagens = req.body.imagens;
 
         const objProduto = {
-            id_produtos: id_produtos,
-            nome_produto: nome_produto,
+            id: id,
+            image: image,
+            nome: nome,
             geracao: geracao,
-            cor: cor,
-            valor: valor,
-            qtd_estoque: qtd_estoque,
-            descricao: descricao,
-            imagens: imagens
+            preco: preco,
+            estoque: estoque,
+            descricao: descricao
         }
-
+        await db.Produtos.create({image: image, nome: nome, geracao:geracao, preco:preco, estoque:estoque, descricao:descricao}) 
         produtos.push(objProduto);
 
         res.redirect("/admin/produtos");

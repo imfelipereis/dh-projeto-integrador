@@ -31,8 +31,8 @@ const AdministracaoController = {
         const image = req.body.image;
         const nome = req.body.nome;
         const geracao = req.body.geracao;
-        const valor = req.body.valor;
-        const qtdEstoque = req.body.qtdEstoque;
+        const preco = req.body.preco;
+        const estoque = req.body.estoque;
         const descricao = req.body.descricao;
 
         const objVenda = {
@@ -40,8 +40,8 @@ const AdministracaoController = {
             image: image,
             nome: nome,
             geracao: geracao,
-            valor: valor,
-            qtdEstoque: qtdEstoque,
+            preco: preco,
+            estoque: estoque,
             descricao: descricao
         }
 
@@ -72,17 +72,17 @@ const AdministracaoController = {
         let info = {
             titulo: 'Cadastrar Novo Produto',
         };
-        return res.render("cadastrar-produto", info);
+        return res.render("admin/produtosCadastrar", info);
     },
 
-    acaoCadastrar: (req, res) => {
+    acaoCadastrar: async (req, res) => {
         
         const id = req.body.id;
         const image = req.body.image;
         const nome = req.body.nome;
         const geracao = req.body.geracao;
-        const valor = req.body.valor;
-        const qtdEstoque = req.body.qtdEstoque;
+        const preco = req.body.preco;
+        const estoque = req.body.estoque;
         const descricao = req.body.descricao;
 
         const objProduto = {
@@ -90,11 +90,12 @@ const AdministracaoController = {
             image: image,
             nome: nome,
             geracao: geracao,
-            valor: valor,
-            qtdEstoque: qtdEstoque,
+            preco: preco,
+            estoque: estoque,
             descricao: descricao
         }
 
+        await db.Produtos.create({image: image, nome: nome, geracao:geracao, preco:preco, estoque:estoque, descricao:descricao}) 
         produtos.push(objProduto);
 
         res.redirect("/produtos");
@@ -127,8 +128,8 @@ const AdministracaoController = {
         const image = req.body.image;
         const nome = req.body.nome;
         const geracao = req.body.geracao;
-        const valor = req.body.valor;
-        const qtdEstoque = req.body.qtdEstoque;
+        const preco = req.body.preco;
+        const estoque = req.body.estoque;
         const descricao = req.body.descricao;
 
         const objCliente = {
@@ -136,8 +137,8 @@ const AdministracaoController = {
             image: image,
             nome: nome,
             geracao: geracao,
-            valor: valor,
-            qtdEstoque: qtdEstoque,
+            preco: preco,
+            estoque: estoque,
             descricao: descricao
         }
 

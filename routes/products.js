@@ -22,9 +22,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 const ProductsController = require('../controllers/ProductsController');
+const AdministracaoController = require('../controllers/AdministracaoController');
 
 router.get("/admin/produtos", ProductsController.produtos);
-router.get("/admin/produtos/cadastrar", ProductsController.acaoCadastrar);
+router.get("/admin/produtos/cadastrar", AdministracaoController.cadastrarProduto);
 router.post("/admin/produtos/acaoCadastrar", upload.single('imagemProduto'), ProductsController.acaoCadastrar);
 router.get("/admin/produtos/excluir/:idProduto", ProductsController.acaoExcluir);
 
