@@ -24,7 +24,7 @@ const upload = multer({ storage: storage });
 const ProductsController = require('../controllers/ProductsController');
 
 router.get("/admin/produtos", ProductsController.produtos);
-router.get("/admin/produtos/cadastrar", ProductsController.produtosCadastrar);
+router.get("/admin/produtos/cadastrar", ProductsController.acaoCadastrar);
 router.post("/admin/produtos/acaoCadastrar", upload.single('imagemProduto'), ProductsController.acaoCadastrar);
 router.get("/admin/produtos/excluir/:idProduto", ProductsController.acaoExcluir);
 

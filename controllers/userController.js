@@ -1,8 +1,10 @@
 const { validationResult } = require('express-validator');
-const User = require('../models/User')
+const Usuarios = require('../models/User')
 const bcrypt = require('bcrypt');
 const { findUserByField } = require('../models/User');
-const fs = require ('fs')
+const fs = require ('fs');
+const { PassThrough } = require('stream');
+const db = require ("../database/models/")
 
 
 let findUserByEmail = function (email){
@@ -14,42 +16,6 @@ let findUserByEmail = function (email){
 const controller = {
     register: (req, res) =>{
         return res.render("cadastrar")
-    },
-
-    processRegister: (req, res) =>{
-        const resultValidations = validationResult(req);
-
-        if (resultValidations.errors.length > 0){
-            return res.render("cadastrar", {
-                errors: resultValidations.mapped(),
-                oldData: req.body
-            });    
-        }
-
-        let userExists = User.findUserByField("email", req.body.email);
-        
-        if (userExists){
-            return res.render("cadastrar", {
-                errors: {
-                    email:{
-                        msg: "Este email já está sendo utilizado"
-                    }
-                },
-                oldData: req.body
-            });
-
-        }
-
-        let userToCreate = {
-            ...req.body,
-            psw: bcrypt.hashSync(req.body.psw, 10),
-            avatar: req.file.filename
-
-        }
-        
-        let userCreated = User.create(userToCreate);
-
-        return res.redirect("logar")
     },
 
     profile:(req, res) => {
@@ -84,10 +50,53 @@ const controller = {
         })
     },
 
+    showLogin: (req, res) =>{
+        res.render("logar")
+    },
+ 
+    showRegister: (req, res) => {
+        return res.render("cadastrar");
+    },
 
+    register: async (req, res) => {
+        const {nome, email, senha, cpf, sobrenome, telefone, cep, logradouro, numero, complemento, bairro,} = req.body;
 
+        await db.Usuarios.create({ nome: nome, email: email, senha: senha, sobrenome:sobrenome, cpf:cpf, telefone:telefone, cep:cep, logradouro:logradouro, numero:numero, complemento:complemento, bairro:bairro })
+        res.redirect("/logar")
 
-    
-}
+        },
+        showLogar: (req, res) => {
+            return res.render("logar");
+        },
+
+    login: async (req, res) => {
+            try {
+              const { email, senha } = req.body;
+        
+              const user = await Usuarios.findOne({
+                where: {
+                  email,
+                }
+              });
+        
+              if(!user) {
+                return res.render('logar', { error: "E-mail/Senha estão incorretos ou não existe", old: req.body});
+              }
+        
+              if(!bcrypt.compareSync(password, user.password)) {
+                return res.render('logar', {error: "E-mail/Senha estão incorretos ou não existe"});
+              }
+        
+              req.session.user = user;
+        
+              res.redirect('/index');
+              
+            } catch(error) {
+              console.log(error);
+              return res.render('logar', {error: "Sistema indisponível, tente novamente!", old: req.body})
+            }
+          },
+        }
+         
 
 module.exports = controller;

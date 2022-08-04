@@ -1,58 +1,130 @@
 <%- include('./partials/head') %>
 
-<!-- <div class="caixa-cadastro">
+<section>
+  
+  <div class="container">
 
-  <h3>Faça seu cadastro</h3>
-<form method="POST" action="/acaoCadastrar" enctype="multipart/form-data">
+      <div class="container-cadastrar">
 
-      <div class="acesso-nome">
-      <label> Nome: </label>
-      <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>">
-      <% if(locals.errors && errors.name){ %>  
-        <div class="danger"><%= errors.name.msg %>
-        </div>
-      <% } %>
+          <div class="titulo-cadastro-usuario">
+              Cadastre sua conta
+          </div>
+
+          <form action="/cadastrar" method="POST" href="/admin">
+          <div class="dados-contato">
+
+              <div class="subtitulo-cadastro-user">
+                  <h2>Seus dados de contato</h2>
+              </div>
+
+              
+              <div class="area-formulario">
+                  
+                      <div class="cadastro-teste">
+                          <label for="">Nome</label>
+                          <input type="text" name="nome" id="" placeholder="Nome">
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">Sobrenome</label>
+                          <input type="text" name="sobrenome" id="" placeholder="Sobrenome">
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">E-mail</label>
+                          <input type="text" name="email" id="" placeholder="E-mail">
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">CPF</label>
+                          <input type="text" name="cpf" id="" placeholder="CPF">
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">Telefone</label>
+                          <input type="text" name="telefone" id="" placeholder="Telefone">
+                      </div>
+                  
+              </div>
+
+          </div>
+
+          <div class="dados-endereco">
+              <div class="subtitulo-cadastro-user">
+                  <h2>Seu endereço</h2>
+              </div>
+
+              <div class="area-formulario">
+                  
+                      <div class="cadastro-teste-ext">
+                          <label for="">CEP</label>
+                          <input type="text" name="cep" id="" placeholder="_ _ _ _ _ - _ _ _">
+                          <button class="button-validarcep">Buscar</button>
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">Logradouro</label>
+                          <input type="text" name="logradouro" id="" placeholder="Logradouro">
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">Número</label>
+                          <input type="text" name="numero" id="" placeholder="Número">
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">Complemento</label>
+                          <input type="text" name="complemento" id="" placeholder="Complemento">
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">Bairro</label>
+                          <input type="text" name="bairro" id="" placeholder="Bairro">
+                      </div class="cadastro-teste">
+
+                  
+              </div>
+          </div>
+
+          <div class="dados-senha">
+              <div class="subtitulo-cadastro-user">
+                  <h2>Sua senha</h2>
+              </div>
+
+              <div class="area-formulario">
+                  
+                      <div class="cadastro-teste">
+                          <label for="">Senha</label>
+                          <input type="password" name="senha" id="" placeholder="Senha">
+                      </div>
+
+                      <div class="cadastro-teste">
+                          <label for="">Repetir a senha</label>
+                          <input type="password" name="" id="" placeholder="Repetir a senha">
+                      </div>
+                 
+              </div>
+          </div>
+
+          
+
+          <div class="dados-promocoes">
+              <div>
+                  <p>Eu li e concordo com os termos de <a href="">Privacidade e Segurança</a></p>
+                  <input type="checkbox">
+              </div>
+
+              <div>
+                  <button type="submit" class="button-cadastraruser">Continuar</button>
+              </div>
+          </div>
+
       </div>
+      
 
-    <div class="acesso-email">
-    <label> Email: </label>
-    <input type="text" name="email" value="<%= locals.oldData ? oldData.name : null %>">
-    <% if(locals.errors && errors.email){ %>  
-      <div class="danger"><%= errors.email.msg %>
-      </div>
-    <% } %>
-    </div>
-
-    <div class="acesso-senha">
-    <label> Senha: </label>
-    <input type="password" name="psw">
-    <% if(locals.errors && errors.psw){ %>  
-      <div class="danger"><%= errors.psw.msg %>
-      </div>
-    <% } %>
-    </div>
-
-    <div class="acesso-avatar">
-      <label> Foto: </label>
-      <input type="file" name="avatar">
-      <% if(locals.errors && errors.avatar){ %>  
-        <div class="danger"><%= errors.avatar.msg %>
-        </div>
-      <% } %>
-    </div>
-
-  <div class="botao-acesso">
-  <button class="finalizar-cadastro">Cadastrar</button>
   </div>
-
-
-
 </form>
-</div>
-</div> -->
 
-<%- include('./partials/cadastrar') %>
-
-<%- include('./partials/newsletter') %>
+</section>
 
 <%- include('./partials/footer') %>

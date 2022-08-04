@@ -10,11 +10,7 @@ const validations = require('../middlewares/validadaRegisterMiddleware')
 
 
 
-//Formulário do registo
-router.get('/cadastrar', userController.register);
 
-//Processar o registro
-router.post('/acaoCadastrar', uploadFile.single('avatar'), validations, userController.processRegister);
 
 //Formulario Login
 
@@ -41,3 +37,9 @@ module.exports = router;
 
 
 
+//Registrar e logar Usuário
+router.get("/cadastrar", userController.showRegister);
+router.post("/cadastrar", userController.register);
+
+router.get("/logar", userController.showLogar);
+router.post("/logar", userController.login);
