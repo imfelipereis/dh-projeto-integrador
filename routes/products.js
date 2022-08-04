@@ -35,6 +35,9 @@ router.get('/descricaoProduto/:id', ProductsController.detalheProduto)
 
 router.get('/produtos', ProductsController.produtosBd)
 
+router.get('/carrinho', ProductsController.verCarrinho)
+router.post("/carrinho", ProductsController.carrinho)
+
 
 
 module.exports = router;

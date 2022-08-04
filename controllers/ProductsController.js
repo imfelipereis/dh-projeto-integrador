@@ -137,7 +137,29 @@ const ProductsController = {
                 listaProdutos: produtos
             }) 
         })
-    }
+    },
+
+    verCarrinho: (req, res) => {
+        res.render("carrinho")
+    },
+
+    carrinho: (req, res) => {
+        
+    },
+
+    produto: (req, res) =>{
+        let info = {
+            titulo: "Descricao do produto",
+        };
+        return res.render('descricaoProduto', info)
+    },
+
+    finalizacao: (req, res) => {
+        let info = {
+            titulo: "Finalização do Pedido",
+        };
+        return res.render('finalizacaoPedido', info)
+    },
 }
 
 module.exports = ProductsController;

@@ -43,34 +43,6 @@ const PoliticasController = {
         return res.render("entrega-produtos", info)
     },
 
-    painelUsuario: (req, res) => {
-        let info = {
-            titulo: 'Painel do Usuario',
-        };
-        return res.render("pagina-usuario", info)
-    },
-
-    login: (req, res) => {
-        let info = {
-            titulo: 'Login',
-        };
-        return res.render("login", info)
-    },
-
-    carrinho: (req, res) => {
-        let info = {
-            titulo: 'Carrinho',
-        };
-        return res.render("carrinho", info)
-    },
-
-    cadastro: (req, res) => {
-        let info = {
-            titulo: 'Cadastro',
-        };
-        return res.render("cadastro", info)
-    },
-
     procurar: (req, res) => {
         let info = {
             titulo: 'Procurar',
@@ -79,20 +51,8 @@ const PoliticasController = {
 
     },
 
-    produto: (req, res) =>{
-        let info = {
-            titulo: "Descricao do produto",
-        };
-        return res.render('descricaoProduto', info)
-    },
-    finalizacao: (req, res) => {
-        let info = {
-            titulo: "Finalização do Pedido",
-        };
-        return res.render('finalizacaoPedido', info)
-    },
-    
-    
+   
+
 }
 
 module.exports = PoliticasController;

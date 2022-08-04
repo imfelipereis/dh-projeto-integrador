@@ -42,10 +42,7 @@ const validations = [
 router.get("/", ProductsController.detalheProduto);
 
 
-// Área do Carrinho
 
-// router.get('/:item', CarrinhoControler.addItem);
-// router.get('/:item', CarrinhoControler.removerItem);
 
 // Área do Footer
 
@@ -53,17 +50,16 @@ router.get("/", PoliticasController.index);
 router.get("/sobre-nos", PoliticasController.sobreNos);
 router.get("/termos-e-condicoes", PoliticasController.termosECondicoes);
 router.get("/politica-de-privacidade", PoliticasController.politicaDePrivacidade);
-router.get("/entrega-produtos", PoliticasController.entregaProdutos);
+
 
 //Arrumar esta rota
 //router.get("/descricaoProduto", ProductsController.descricaoProduto);
 
 
-router.get("/login", PoliticasController.login);
-router.get("/carrinho", PoliticasController.carrinho);
+
 
 router.get("/procurar", PoliticasController.procurar);
-router.get("/finalizacaoPedido", PoliticasController.finalizacao)
+
 
 
 

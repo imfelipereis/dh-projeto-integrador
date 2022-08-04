@@ -94,9 +94,10 @@ const AdministracaoController = {
             estoque: estoque,
             descricao: descricao
         }
-
-        await db.Produtos.create({image: image, nome: nome, geracao:geracao, preco:preco, estoque:estoque, descricao:descricao}) 
         produtos.push(objProduto);
+        
+        await db.Produtos.create({image: image, nome: nome, geracao:geracao, preco:preco, estoque:estoque, descricao:descricao}) 
+        
 
         res.redirect("/produtos");
     },
@@ -114,77 +115,15 @@ const AdministracaoController = {
     //     };
     //     return res.render("clientes", info)
     // }
-
-    cadastrarCliente: (req, res) => {
-        let info = {
-            titulo: 'Cadastrar Novo Cliente',
-        };
-        return res.render("cadastrar-cliente", info);
-    },
-
-    acaoCadastrarCliente: (req, res) => {
-        
-        const id = req.body.id;
-        const image = req.body.image;
-        const nome = req.body.nome;
-        const geracao = req.body.geracao;
-        const preco = req.body.preco;
-        const estoque = req.body.estoque;
-        const descricao = req.body.descricao;
-
-        const objCliente = {
-            id: id,
-            image: image,
-            nome: nome,
-            geracao: geracao,
-            preco: preco,
-            estoque: estoque,
-            descricao: descricao
-        }
-
-        clientes.push(objCliente);
-
-        res.redirect("/clientes");
-    },
-
-    editarCliente: (req, res) => {
-        let info = {
-            titulo: 'Editar Cliente',
-        };
-        return res.render("editar-cliente", info)
-    },
-
-    usuariosBd: (req, res) => {
-        db.Usuarios.findAll().then((usuarios) => {
-            res.render("listaUsuarios", {
-                listaUsuarios: usuarios
-            }) 
-        })
-    },
-
     logar: (req, res) =>{
        res.render("logar")
     },
 
-    logarAcao: async function (req, res){
-        const { email, senha } = req.body;
-
-        const usuarioEncontrado = await db.Admin.findOne({where: {email: email} })
-
-        if ( usuarioEncontrado == null) {
-            res.render("logar", {error: ["    Usuario ou senha invalidos"] });
-            return
-        }
-        if (!bcrypt.compareSync(senha, usuarioEncontrado.senha)){
-            res.render("logar", {error: ["    Usuario ou senha inválidos"] });
-            return;
-        }
-
-        req.session.email = usuarioEncontrado.email;
-        req.session.nome = usuarioEncontrado.nome;
-
-        res.redirect("admin/dashboard")
-        
+    excluir: async (req, res) => {
+        const id = req.body.id;
+        db.Produtos.destroy({
+            where: {id: id}
+        })
     }
 }
 

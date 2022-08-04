@@ -78,7 +78,7 @@ const controller = {
                 req.session.email = userEncontrado.email;
                 req.session.senha = userEncontrado.senha;
         
-                res.redirect('/index');
+                res.redirect('/pagina-usuario');
                 return res.render('logar', {error: "E-mail/Senha estão incorretos ou não existe"});
               }
         
