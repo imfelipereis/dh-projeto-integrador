@@ -1,17 +1,12 @@
 const { validationResult } = require('express-validator');
-const Usuarios = require('../models/User')
+
 const bcrypt = require('bcrypt');
-const { findUserByField } = require('../models/User');
+
 const fs = require ('fs');
 const { PassThrough } = require('stream');
 const db = require ("../database/models/")
 
 
-let findUserByEmail = function (email){
-    let todosUsuarios = this.getUsers();
-    let userFoundTeste = todosUsuarios.find( oneUser => oneUser.email === email );
-    return userFoundTeste;
-}
 
 const controller = {
     register: (req, res) =>{
@@ -73,27 +68,25 @@ const controller = {
             try {
               const { email, senha } = req.body;
         
-              const user = await Usuarios.findOne({
-                where: {
-                  email,
-                }
-              });
-        
-              if(!user) {
+              const userEncontrado = await db.Usuarios.findOne({where: {email: email} })
+               
+              if(userEncontrado == null) {
                 return res.render('logar', { error: "E-mail/Senha estão incorretos ou não existe", old: req.body});
               }
         
-              if(!bcrypt.compareSync(password, user.password)) {
+              if(senha == userEncontrado.senha) {
+                req.session.email = userEncontrado.email;
+                req.session.senha = userEncontrado.senha;
+        
+                res.redirect('/index');
                 return res.render('logar', {error: "E-mail/Senha estão incorretos ou não existe"});
               }
         
-              req.session.user = user;
-        
-              res.redirect('/index');
+              return res.render('logar', {error: "E-mail/Senha estão incorretos ou não existe"});
               
             } catch(error) {
               console.log(error);
-              return res.render('logar', {error: "Sistema indisponível, tente novamente!", old: req.body})
+              return res.render('logar', {error: "E-mail/Senha estão incorretos ou não existe", old: req.body})
             }
           },
         }

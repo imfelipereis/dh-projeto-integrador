@@ -489,6 +489,7 @@ body container section h2{
     justify-content: space-between;
     justify-content: center;
     max-width: fit-content;
+    max-height: fit-content;
 }
 
 .saiba-mais{
@@ -1240,5 +1241,11 @@ section.banner .carousel .controls button img {
     background-color: red;
     max-width: fit-content;
     opacity: 0.8;
+}
+
+.produtoslistagem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
